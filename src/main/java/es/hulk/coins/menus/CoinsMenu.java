@@ -37,25 +37,28 @@ public class CoinsMenu extends Menu {
     public Map<Integer, Button> getButtons(Player player) {
         Map<Integer, Button> buttons = new HashMap<>();
 
-        buttons.put(0, new Button() {
+        buttons.put(13, new Button() {
 
                     @Override
                     public ItemStack getButtonItem(Player p0) {
-                        return new ItemBuilder(Material.DIAMOND_SWORD).name("&a&lOwner").lore(Collections.singletonList("&aCost: 1500 coins")).build();
+                        return new ItemBuilder(Material.DIAMOND_SWORD).name("&a&lRanks").build();
                     }
 
                     @Override
                     public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                        if (AquaCoreUtils.getCoins(player) >= 1500) {
-                            AquaCoreUtils.setPermRank(player, "Owner");
-                            AquaCoreUtils.removeCoins(player, 1500);
-                            player.sendMessage("§aYou have bought the rank §fOwner §afor §f1500 coins");
-                        } else {
-                            player.sendMessage("§cYou don't have enough coins");
-                        }
+                        new RankMenu().openMenu(player);
                     }
                 }
         );
+
+        buttons.put(22, new Button() {
+
+            @Override
+            public ItemStack getButtonItem(Player p0) {
+                return new ItemBuilder(Material.NETHER_STAR).name("&6&lCoins").lore(Arrays.asList("", "&6Your Coins&7: &f" + AquaCoreUtils.getCoins(player), "")).build();
+            }
+        });
+
         return buttons;
     }
 }
