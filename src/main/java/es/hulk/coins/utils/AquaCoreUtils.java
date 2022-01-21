@@ -43,10 +43,12 @@ public class AquaCoreUtils {
         }
     }
 
-    public static void setRank(Player player, String rank) {
-        PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
-        Grant grant = playerData.getHighestGrant();
-        grant.setRankName(rank);
+    public static void setRank(Player player, String rank, String duration, String reason) {
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "setrank " + player.getName() + " " + rank + " " + duration + " global " + reason);
     }
 
+    public static void rank(Player player, String rank) {
+        PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
+        playerData.getHighestGrant().setRankName(rank);
+    }
 }
