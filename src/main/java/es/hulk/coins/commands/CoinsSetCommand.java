@@ -2,11 +2,15 @@ package es.hulk.coins.commands;
 
 import es.hulk.coins.utils.AquaCoreUtils;
 import es.hulk.coins.utils.command.BaseCommand;
+import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public class CoinsSetCommand extends BaseCommand {
+
+    @Command(name = "coins.set", permission = "coins.command.set")
+
     @Override
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
@@ -29,7 +33,7 @@ public class CoinsSetCommand extends BaseCommand {
 
                 if (target != null) {
                     AquaCoreUtils.setCoins(target, amount);
-                    player.sendMessage("You have set " + amount + " coins to " + args[0]);
+                    player.sendMessage("§aYou have set §f" + amount + " §acoins to §f" + args[0]);
                 } else {
                     player.sendMessage("§cPlayer not found.");
                 }
