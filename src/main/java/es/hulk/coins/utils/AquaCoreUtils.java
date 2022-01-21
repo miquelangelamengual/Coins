@@ -1,6 +1,7 @@
 package es.hulk.coins.utils;
 
 import me.activated.core.api.player.PlayerData;
+import me.activated.core.api.player.PunishData;
 import me.activated.core.api.rank.RankData;
 import me.activated.core.api.rank.grant.Grant;
 import me.activated.core.plugin.AquaCoreAPI;
@@ -54,5 +55,17 @@ public class AquaCoreUtils {
     public static void rank(Player player, String rank) {
         PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
         playerData.getHighestGrant().setRankName(rank);
+    }
+
+    public static void setUnMute(Player player) {
+        PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
+        PunishData punishData = playerData.getPunishData();
+        punishData.getActiveMute().delete();
+    }
+
+    public static void setUnBan(Player player) {
+        PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
+        PunishData punishData = playerData.getPunishData();
+        punishData.getActiveBan().delete();
     }
 }
