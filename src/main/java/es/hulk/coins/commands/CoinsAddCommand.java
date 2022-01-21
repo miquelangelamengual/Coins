@@ -40,7 +40,7 @@ public class CoinsAddCommand extends BaseCommand {
 
                 if (target != null) {
                     AquaCoreUtils.addCoins(target, amount);
-                    player.sendMessage("You have added " + amount + " coins to " + args[0]);
+                    player.sendMessage("§aYou have added §f" + amount + " §acoins to §f" + args[0]);
                 } else {
                     player.sendMessage("§cPlayer not found.");
                 }
