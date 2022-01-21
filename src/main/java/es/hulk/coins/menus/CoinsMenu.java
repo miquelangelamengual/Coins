@@ -9,7 +9,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +24,7 @@ public class CoinsMenu extends Menu {
 
     @Override
     public String getTitle(Player player) {
-        return "Title";
+        return "Shop";
     }
 
     @Override
@@ -37,11 +36,25 @@ public class CoinsMenu extends Menu {
     public Map<Integer, Button> getButtons(Player player) {
         Map<Integer, Button> buttons = new HashMap<>();
 
+        buttons.put(4, new Button() {
+
+                    @Override
+                    public ItemStack getButtonItem(Player p0) {
+                        return new ItemBuilder(Material.ANVIL).name("&6&lPunishments").build();
+                    }
+
+                    @Override
+                    public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
+                        new PunishmentsMenu().openMenu(player);
+                    }
+                }
+        );
+
         buttons.put(13, new Button() {
 
                     @Override
                     public ItemStack getButtonItem(Player p0) {
-                        return new ItemBuilder(Material.DIAMOND_SWORD).name("&a&lRanks").build();
+                        return new ItemBuilder(Material.DIAMOND).name("&6&lRanks").build();
                     }
 
                     @Override
@@ -55,7 +68,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.NETHER_STAR).name("&6&lCoins").lore(Arrays.asList("", "&6Your Coins&7: &f" + AquaCoreUtils.getCoins(player), "")).build();
+                return new ItemBuilder(Material.NETHER_STAR).name("&6&lYour Coins").lore(Collections.singletonList("&7You have&a &a" + AquaCoreUtils.getCoins(player) + " coins")).build();
             }
         });
 
