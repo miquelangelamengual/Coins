@@ -1,7 +1,6 @@
 package es.hulk.coins;
 
-import es.hulk.coins.commands.CoinsCommand;
-import es.hulk.coins.commands.CoinsMenuCommand;
+import es.hulk.coins.commands.*;
 import es.hulk.coins.utils.command.CommandManager;
 import es.hulk.coins.utils.menu.ButtonListener;
 import lombok.Getter;
@@ -28,6 +27,9 @@ public class Coins extends JavaPlugin {
     public void loadCommands() {
         new CoinsCommand();
         new CoinsMenuCommand();
+        new CoinsAddCommand();
+        new CoinsRemoveCommand();
+        new CoinsSetCommand();
     }
 
     @Override
