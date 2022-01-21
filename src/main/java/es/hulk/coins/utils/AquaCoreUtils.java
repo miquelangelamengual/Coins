@@ -43,8 +43,12 @@ public class AquaCoreUtils {
         }
     }
 
-    public static void setRank(Player player, String rank, String duration, String reason) {
-        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "setrank " + player.getName() + " " + rank + " " + duration + " global " + reason);
+    public static void setPermRank(Player player, String rank) {
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "setrank " + player.getName() + " " + rank + " perm global Purchased with coins");
+    }
+
+    public static void setTempRank(Player player, String rank) {
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "setrank " + player.getName() + " " + rank + " 30d global Purchased with coins");
     }
 
     public static void rank(Player player, String rank) {

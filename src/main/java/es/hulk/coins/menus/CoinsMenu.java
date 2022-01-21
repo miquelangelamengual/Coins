@@ -30,7 +30,7 @@ public class CoinsMenu extends Menu {
 
     @Override
     public int size(Map<Integer, Button> buttons) {
-        return 36;
+        return 27;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class CoinsMenu extends Menu {
                     @Override
                     public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                         if (AquaCoreUtils.getCoins(player) >= 1500) {
-                            AquaCoreUtils.setRank(player, "Owner", "perm", "Purchased with coins");
+                            AquaCoreUtils.setPermRank(player, "Owner");
                             AquaCoreUtils.removeCoins(player, 1500);
                             player.sendMessage("§aYou have bought the rank §fOwner §afor §f1500 coins");
                         } else {
