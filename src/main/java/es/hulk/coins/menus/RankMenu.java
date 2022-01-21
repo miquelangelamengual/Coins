@@ -1,5 +1,7 @@
 package es.hulk.coins.menus;
 
+import es.hulk.coins.menus.rank.PermRankMenu;
+import es.hulk.coins.menus.rank.TempRankMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -15,7 +17,7 @@ public class RankMenu extends Menu {
 
     @Override
     public String getTitle(Player player) {
-        return "&6&lRANKS";
+        return "Ranks";
     }
 
     @Override
@@ -36,7 +38,7 @@ public class RankMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                
+                new PermRankMenu().openMenu(player);
             }
         });
 
@@ -49,7 +51,7 @@ public class RankMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-
+                new TempRankMenu().openMenu(player);
             }
         });
 
