@@ -81,7 +81,7 @@
             <artifactId>AquaCore-API</artifactId>
             <version>2.6.21</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/AquaCore.jar</systemPath>
+            <systemPath>${project.basedir}/libs/Core.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

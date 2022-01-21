@@ -1,3 +1,4 @@
 name: Coins
 version: '${project.version}'
 main: es.hulk.coins.Coins
+depend: ["AquaCore"]
