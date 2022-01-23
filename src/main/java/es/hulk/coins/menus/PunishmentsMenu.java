@@ -1,7 +1,8 @@
 package es.hulk.coins.menus;
 
-import es.hulk.coins.utils.AquaCoreUtils;
 import es.hulk.coins.utils.ItemBuilder;
+import es.hulk.coins.utils.Utils;
+import es.hulk.coins.utils.aquacore.PunishmentsUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
 import org.bukkit.Material;
@@ -36,7 +37,12 @@ public class PunishmentsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                AquaCoreUtils.setUnMute(player);
+                if (!PunishmentsUtils.isBanned(player)) {
+                    PunishmentsUtils.setUnBan(player);
+                    player.sendMessage(Utils.color("&aYou have been unbanned from the network!"));
+                    return;
+                }
+                player.sendMessage(Utils.color("&cYou are already unbanned!"));
             }
         });
 
@@ -48,7 +54,12 @@ public class PunishmentsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                AquaCoreUtils.setUnBan(player);
+                if (!PunishmentsUtils.isMuted(player)) {
+                    PunishmentsUtils.setUnMute(player);
+                    player.sendMessage(Utils.color("&aYou have been unmuted from the network!"));
+                    return;
+                }
+                player.sendMessage(Utils.color("&cYou are already unmuted!"));
             }
         });
         return buttons;
