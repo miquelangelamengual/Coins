@@ -1,6 +1,6 @@
 package es.hulk.coins.commands;
 
-import es.hulk.coins.utils.AquaCoreUtils;
+import es.hulk.coins.utils.aquacore.CoinsUtils;
 import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
@@ -26,7 +26,7 @@ public class CoinsRemoveCommand extends BaseCommand {
         if (args.length == 1) {
             try {
                 int amount = Integer.parseInt(args[0]);
-                AquaCoreUtils.removeCoins(player, amount);
+                CoinsUtils.removeCoins(player, amount);
                 player.sendMessage("§6You have removed §f" + amount + " §6coins to your account.");
             } catch (NumberFormatException e) {
                 player.sendMessage("§cInvalid number.");
@@ -39,7 +39,7 @@ public class CoinsRemoveCommand extends BaseCommand {
                 int amount = Integer.parseInt(args[1]);
 
                 if (target != null) {
-                    AquaCoreUtils.removeCoins(target, amount);
+                    CoinsUtils.removeCoins(target, amount);
                     player.sendMessage("§6You have removed §f" + amount + " §6coins to §f" + args[0]);
                 } else {
                     player.sendMessage("§cPlayer not found.");

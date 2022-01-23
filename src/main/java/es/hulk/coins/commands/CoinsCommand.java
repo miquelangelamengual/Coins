@@ -1,6 +1,6 @@
 package es.hulk.coins.commands;
 
-import es.hulk.coins.utils.AquaCoreUtils;
+import es.hulk.coins.utils.aquacore.CoinsUtils;
 import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
@@ -21,6 +21,6 @@ public class CoinsCommand extends BaseCommand {
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
 
-        player.sendMessage("§aYou have §e" + AquaCoreUtils.getCoins(player) + " §acoins.");
+        player.sendMessage("§aYou have §e" + CoinsUtils.getCoins(player) + " §acoins.");
     }
 }

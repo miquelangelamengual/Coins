@@ -1,6 +1,6 @@
 package es.hulk.coins.commands;
 
-import es.hulk.coins.utils.AquaCoreUtils;
+import es.hulk.coins.utils.aquacore.CoinsUtils;
 import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
@@ -19,7 +19,7 @@ public class CoinsSetCommand extends BaseCommand {
         if (args.length == 1) {
             try {
                 int amount = Integer.parseInt(args[0]);
-                AquaCoreUtils.setCoins(player, amount);
+                CoinsUtils.setCoins(player, amount);
                 player.sendMessage("§aYou have set §f" + amount + " §acoins to your account.");
             } catch (NumberFormatException e) {
                 player.sendMessage("§cInvalid number.");
@@ -32,7 +32,7 @@ public class CoinsSetCommand extends BaseCommand {
                 int amount = Integer.parseInt(args[1]);
 
                 if (target != null) {
-                    AquaCoreUtils.setCoins(target, amount);
+                    CoinsUtils.setCoins(target, amount);
                     player.sendMessage("§aYou have set §f" + amount + " §acoins to §f" + args[0]);
                 } else {
                     player.sendMessage("§cPlayer not found.");

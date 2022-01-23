@@ -7,16 +7,9 @@ import es.hulk.coins.utils.command.CommandArgs;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-/**
- * Created by Hulk
- * at 20/01/2022
- * Project: Coins
- * Class: CoinsAddCommand
- */
+public class CoinsResetCommand extends BaseCommand {
 
-public class CoinsAddCommand extends BaseCommand {
-
-    @Command(name = "coins.add", aliases = {"coins.give", "coins.givecoins"},  permission = "coins.command.add")
+    @Command(name = "coins.remove", permission = "coins.command.remove")
 
     @Override
     public void onCommand(CommandArgs command) {
@@ -25,9 +18,8 @@ public class CoinsAddCommand extends BaseCommand {
 
         if (args.length == 1) {
             try {
-                int amount = Integer.parseInt(args[0]);
-                CoinsUtils.addCoins(player, amount);
-                player.sendMessage("§aYou have added §f" + amount + " §acoins to your account.");
+                CoinsUtils.resetCoins(player);
+                player.sendMessage("§cYour coins has been resetted.");
             } catch (NumberFormatException e) {
                 player.sendMessage("§cInvalid number.");
             }
@@ -36,11 +28,10 @@ public class CoinsAddCommand extends BaseCommand {
         if (args.length == 2) {
             try {
                 Player target = Bukkit.getPlayer(args[0]);
-                int amount = Integer.parseInt(args[1]);
 
                 if (target != null) {
-                    CoinsUtils.addCoins(target, amount);
-                    player.sendMessage("§aYou have added §f" + amount + " §acoins to §f" + args[0]);
+                    CoinsUtils.resetCoins(target);
+                    player.sendMessage("§cYou have reset coins of §f" + target.getName() + ".");
                 } else {
                     player.sendMessage("§cPlayer not found.");
                 }
@@ -50,3 +41,4 @@ public class CoinsAddCommand extends BaseCommand {
         }
     }
 }
+

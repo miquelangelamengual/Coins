@@ -1,7 +1,7 @@
 package es.hulk.coins.menus;
 
-import es.hulk.coins.utils.AquaCoreUtils;
 import es.hulk.coins.utils.ItemBuilder;
+import es.hulk.coins.utils.aquacore.CoinsUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
 import org.bukkit.Material;
@@ -68,7 +68,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.NETHER_STAR).name("&6&lYour Coins").lore(Collections.singletonList("&7You have&a &a" + AquaCoreUtils.getCoins(player) + " coins")).build();
+                return new ItemBuilder(Material.NETHER_STAR).name("&6&lYour Coins").lore(Collections.singletonList("&7You have&a &a" + CoinsUtils.getCoins(player) + " coins")).build();
             }
         });
 

@@ -32,6 +32,7 @@ public class Coins extends JavaPlugin {
         new CoinsAddCommand();
         new CoinsRemoveCommand();
         new CoinsSetCommand();
+        new CoinsResetCommand();
     }
 
     @Override
