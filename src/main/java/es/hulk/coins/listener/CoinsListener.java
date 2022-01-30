@@ -20,13 +20,13 @@ public class CoinsListener implements Listener {
         new BukkitRunnable() {
             @Override
             public void run() {
-                player.getInventory().setItem(2, giveItem());
+                player.getInventory().setItem(7, giveItem());
             }
         }.runTaskLaterAsynchronously(Coins.get(), 20L);
     }
 
     private ItemStack giveItem() {
-        return new ItemBuilder(Material.CHEST).name("&6&lCoins Shop").lore("&7&oClick to open the shop").build();
+        return new ItemBuilder(Material.CHEST).name("&6Coins Shop &7(Right Click)").build();
     }
 
     @EventHandler

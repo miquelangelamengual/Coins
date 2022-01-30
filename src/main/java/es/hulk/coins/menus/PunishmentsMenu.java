@@ -37,7 +37,7 @@ public class PunishmentsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (!PunishmentsUtils.isBanned(player)) {
+                if (PunishmentsUtils.isBanned(player)) {
                     PunishmentsUtils.setUnBan(player);
                     player.sendMessage(Utils.color("&aYou have been unbanned from the network!"));
                     return;
@@ -54,7 +54,7 @@ public class PunishmentsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (!PunishmentsUtils.isMuted(player)) {
+                if (PunishmentsUtils.isMuted(player)) {
                     PunishmentsUtils.setUnMute(player);
                     player.sendMessage(Utils.color("&aYou have been unmuted from the network!"));
                     return;
