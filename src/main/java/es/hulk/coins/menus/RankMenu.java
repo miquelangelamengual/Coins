@@ -5,6 +5,7 @@ import es.hulk.coins.menus.rank.TempRankMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
+import es.hulk.coins.utils.menu.buttons.BackButton;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -54,6 +55,8 @@ public class RankMenu extends Menu {
                 new TempRankMenu().openMenu(player);
             }
         });
+
+        buttons.put(22, new BackButton(new CoinsMenu()));
 
 
         return buttons;

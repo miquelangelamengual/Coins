@@ -1,7 +1,9 @@
 package es.hulk.coins.menus.rank;
 
+import es.hulk.coins.menus.CoinsMenu;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
+import es.hulk.coins.utils.menu.buttons.BackButton;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
@@ -22,6 +24,9 @@ public class PermRankMenu extends Menu {
     @Override
     public Map<Integer, Button> getButtons(Player player) {
         Map<Integer, Button> buttons = new HashMap<>();
+
+        buttons.put(22, new BackButton(new CoinsMenu()));
+
         return buttons;
     }
 }

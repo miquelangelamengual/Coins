@@ -5,6 +5,7 @@ import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.PunishmentsUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
+import es.hulk.coins.utils.menu.buttons.BackButton;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -62,6 +63,9 @@ public class PunishmentsMenu extends Menu {
                 player.sendMessage(Utils.color("&cYou are already unmuted!"));
             }
         });
+
+        buttons.put(22, new BackButton(new CoinsMenu()));
+
         return buttons;
     }
 }
