@@ -2,6 +2,7 @@ package es.hulk.coins.menus;
 
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
+import es.hulk.coins.utils.aquacore.CoinsUtils;
 import es.hulk.coins.utils.aquacore.PunishmentsUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -38,12 +39,17 @@ public class PunishmentsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (PunishmentsUtils.isBanned(player)) {
-                    PunishmentsUtils.setUnBan(player);
-                    player.sendMessage(Utils.color("&aYou have been unbanned from the network!"));
-                    return;
+                if (CoinsUtils.getCoins(player) >= 2500) {
+                    if (PunishmentsUtils.isBanned(player)) {
+                        PunishmentsUtils.setUnBan(player);
+                        CoinsUtils.removeCoins(player, 2500);
+                        player.sendMessage(Utils.color("&aYou have been unbanned from the network!"));
+                        return;
+                    }
+                    player.sendMessage(Utils.color("&cYou are already unbanned!"));
+                } else {
+                    player.sendMessage(Utils.color("&cYou don't have enough coins!"));
                 }
-                player.sendMessage(Utils.color("&cYou are already unbanned!"));
             }
         });
 
@@ -55,12 +61,17 @@ public class PunishmentsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (PunishmentsUtils.isMuted(player)) {
-                    PunishmentsUtils.setUnMute(player);
-                    player.sendMessage(Utils.color("&aYou have been unmuted from the network!"));
-                    return;
+                if (CoinsUtils.getCoins(player) >= 1500) {
+                    if (PunishmentsUtils.isMuted(player)) {
+                        PunishmentsUtils.setUnMute(player);
+                        CoinsUtils.removeCoins(player, 1500);
+                        player.sendMessage(Utils.color("&aYou have been unmuted from the network!"));
+                        return;
+                    }
+                    player.sendMessage(Utils.color("&cYou are already unmuted!"));
+                } else {
+                    player.sendMessage(Utils.color("&cYou don't have enough coins!"));
                 }
-                player.sendMessage(Utils.color("&cYou are already unmuted!"));
             }
         });
 
