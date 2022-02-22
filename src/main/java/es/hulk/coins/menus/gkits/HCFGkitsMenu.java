@@ -1,6 +1,5 @@
 package es.hulk.coins.menus.gkits;
 
-import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
 import org.bukkit.entity.Player;
