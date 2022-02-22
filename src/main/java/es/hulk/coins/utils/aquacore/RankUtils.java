@@ -20,4 +20,9 @@ public class RankUtils {
         playerData.getHighestGrant().setRankName(rank);
     }
 
+    public static boolean hasRank(Player player, String rank) {
+        PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
+        return playerData.getHighestGrant().getRankName().equalsIgnoreCase(rank);
+    }
+
 }
