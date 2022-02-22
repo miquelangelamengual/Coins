@@ -65,7 +65,7 @@ public class CoinsMenu extends Menu {
         buttons.put(5, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.ARROW).name("&6&Keys").build();
+                return new ItemBuilder(Material.EMERALD).name("&6&Keys").build();
             }
 
             @Override
