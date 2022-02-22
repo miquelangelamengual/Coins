@@ -41,7 +41,7 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (!RankUtils.hasRank(player, "Etoirir")) {
+                    if (RankUtils.hasRank(player, "Etoirir")) {
                         RankUtils.setTempRank(player, "Etoirir");
                         CoinsUtils.removeCoins(player, 2000);
                         return;
@@ -62,7 +62,7 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (!RankUtils.hasRank(player, "Blaze")) {
+                    if (RankUtils.hasRank(player, "Blaze")) {
                         RankUtils.setTempRank(player, "Blaze");
                         CoinsUtils.removeCoins(player, 2000);
                         return;
@@ -83,7 +83,7 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (!RankUtils.hasRank(player, "Rex")) {
+                    if (RankUtils.hasRank(player, "Rex")) {
                         RankUtils.setTempRank(player, "Rex");
                         CoinsUtils.removeCoins(player, 2000);
                         return;
@@ -104,7 +104,7 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (!RankUtils.hasRank(player, "Errier")) {
+                    if (RankUtils.hasRank(player, "Errier")) {
                         RankUtils.setTempRank(player, "Errier");
                         CoinsUtils.removeCoins(player, 2000);
                         return;
@@ -125,7 +125,7 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (!RankUtils.hasRank(player, "Crowl")) {
+                    if (RankUtils.hasRank(player, "Crowl")) {
                         RankUtils.setTempRank(player, "Crowl");
                         CoinsUtils.removeCoins(player, 2000);
                         return;
