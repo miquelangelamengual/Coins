@@ -20,7 +20,7 @@ public class CoinsListener implements Listener {
         new BukkitRunnable() {
             @Override
             public void run() {
-                player.getInventory().setItem(7, giveItem());
+                player.getInventory().setItem(4, giveItem());
             }
         }.runTaskLaterAsynchronously(Coins.get(), 20L);
     }
@@ -34,8 +34,8 @@ public class CoinsListener implements Listener {
         Player player = event.getPlayer();
         if (event.getItem() == null) return;
         if (event.getItem().getType() == Material.CHEST) {
-            event.setCancelled(true);
             new CoinsMenu().openMenu(player);
+            event.setCancelled(true);
         }
     }
 
