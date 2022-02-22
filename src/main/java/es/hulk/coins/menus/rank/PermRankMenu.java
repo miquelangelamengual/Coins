@@ -41,7 +41,7 @@ public class PermRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (RankUtils.hasRank(player, "Etoirir")) {
+                    if (!RankUtils.hasRank(player, "Etoirir")) {
                         RankUtils.setPermRank(player, "Etoirir");
                         CoinsUtils.removeCoins(player, 2000);
                         return;
@@ -62,7 +62,7 @@ public class PermRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (RankUtils.hasRank(player, "Blaze")) {
+                    if (!RankUtils.hasRank(player, "Blaze")) {
                         RankUtils.setPermRank(player, "Blaze");
                         CoinsUtils.removeCoins(player, 2000);
                         return;
@@ -82,7 +82,16 @@ public class PermRankMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                RankUtils.setPermRank(player, "Rex");
+                if (CoinsUtils.getCoins(player) >= 2000) {
+                    if (!RankUtils.hasRank(player, "Rex")) {
+                        RankUtils.setPermRank(player, "Rex");
+                        CoinsUtils.removeCoins(player, 2000);
+                        return;
+                    }
+                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    return;
+                }
+                player.sendMessage(Utils.color("&cYou don't have enough coins!"));
             }
         });
 
@@ -94,7 +103,16 @@ public class PermRankMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                RankUtils.setPermRank(player, "Errier");
+                if (CoinsUtils.getCoins(player) >= 2000) {
+                    if (!RankUtils.hasRank(player, "Errier")) {
+                        RankUtils.setPermRank(player, "Errier");
+                        CoinsUtils.removeCoins(player, 2000);
+                        return;
+                    }
+                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    return;
+                }
+                player.sendMessage(Utils.color("&cYou don't have enough coins!"));
             }
         });
 
@@ -106,7 +124,16 @@ public class PermRankMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                RankUtils.setPermRank(player, "Crowl");
+                if (CoinsUtils.getCoins(player) >= 2000) {
+                    if (!RankUtils.hasRank(player, "Crowl")) {
+                        RankUtils.setPermRank(player, "Crowl");
+                        CoinsUtils.removeCoins(player, 2000);
+                        return;
+                    }
+                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    return;
+                }
+                player.sendMessage(Utils.color("&cYou don't have enough coins!"));
             }
         });
 
