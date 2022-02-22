@@ -50,6 +50,30 @@ public class CoinsMenu extends Menu {
                 }
         );
 
+        buttons.put(3, new Button() {
+            @Override
+            public ItemStack getButtonItem(Player p0) {
+                return new ItemBuilder(Material.ARROW).name("&6&Gkits").build();
+            }
+
+            @Override
+            public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
+                new GkitsMenu().openMenu(player);
+            }
+        });
+
+        buttons.put(5, new Button() {
+            @Override
+            public ItemStack getButtonItem(Player p0) {
+                return new ItemBuilder(Material.ARROW).name("&6&Keys").build();
+            }
+
+            @Override
+            public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
+                new KeysMenu().openMenu(player);
+            }
+        });
+
         buttons.put(13, new Button() {
 
                     @Override
