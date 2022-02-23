@@ -40,7 +40,7 @@ public class CoinsMenu extends Menu {
 
                     @Override
                     public ItemStack getButtonItem(Player p0) {
-                        return new ItemBuilder(Material.ANVIL).name("&6&lPunishments").build();
+                        return new ItemBuilder(Material.ANVIL).name("&6Punishments").build();
                     }
 
                     @Override
@@ -53,7 +53,7 @@ public class CoinsMenu extends Menu {
         buttons.put(3, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.ARROW).name("&6&Gkits").build();
+                return new ItemBuilder(Material.DIAMOND_CHESTPLATE).name("&6Kits").build();
             }
 
             @Override
@@ -65,7 +65,7 @@ public class CoinsMenu extends Menu {
         buttons.put(5, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.EMERALD).name("&6&Keys").build();
+                return new ItemBuilder(Material.EMERALD).name("&6Keys").build();
             }
 
             @Override
@@ -78,7 +78,7 @@ public class CoinsMenu extends Menu {
 
                     @Override
                     public ItemStack getButtonItem(Player p0) {
-                        return new ItemBuilder(Material.DIAMOND).name("&6&lRanks").build();
+                        return new ItemBuilder(Material.DIAMOND).name("&6Ranks").build();
                     }
 
                     @Override
@@ -92,7 +92,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.NETHER_STAR).name("&6&lYour Coins").lore(Collections.singletonList("&7You have&a &a" + CoinsUtils.getCoins(player) + " coins")).build();
+                return new ItemBuilder(Material.NETHER_STAR).name("&6Your Coins").lore(Collections.singletonList("&7You have&a &a" + CoinsUtils.getCoins(player) + " coins")).build();
             }
         });
 
