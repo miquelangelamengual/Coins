@@ -76,17 +76,28 @@ public class CoinsMenu extends Menu {
 
         buttons.put(13, new Button() {
 
-                    @Override
-                    public ItemStack getButtonItem(Player p0) {
-                        return new ItemBuilder(Material.DIAMOND).name("&6Ranks").build();
-                    }
+            @Override
+            public ItemStack getButtonItem(Player p0) {
+                return new ItemBuilder(Material.DIAMOND).name("&6Ranks").build();
+            }
 
-                    @Override
-                    public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                        new RankMenu().openMenu(player);
-                    }
-                }
-        );
+            @Override
+            public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
+                new RankMenu().openMenu(player);
+            }
+        });
+
+        buttons.put(21, new Button() {
+            @Override
+            public ItemStack getButtonItem(Player p0) {
+                return new ItemBuilder(Material.ENDER_PEARL).name("&bRank Upgrades").build();
+            }
+
+            @Override
+            public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
+                new RankUpgradeMenu().openMenu(player);
+            }
+        });
 
         buttons.put(22, new Button() {
 
