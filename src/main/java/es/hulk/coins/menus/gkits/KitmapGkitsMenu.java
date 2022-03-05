@@ -18,7 +18,7 @@ public class KitmapGkitsMenu extends Menu {
 
     @Override
     public String getTitle(Player player) {
-        return "Kitmap Gkits";
+        return "Gkits";
     }
 
     @Override

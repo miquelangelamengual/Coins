@@ -1,5 +1,7 @@
 package es.hulk.coins.menus;
 
+import es.hulk.coins.menus.gkits.KitmapGkitsMenu;
+import es.hulk.coins.menus.keys.KitmapKeysMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
 import es.hulk.coins.utils.menu.Button;
@@ -58,7 +60,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                new GkitsMenu().openMenu(player);
+                new KitmapGkitsMenu().openMenu(player);
             }
         });
 
@@ -70,7 +72,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                new KeysMenu().openMenu(player);
+                new KitmapKeysMenu().openMenu(player);
             }
         });
 
