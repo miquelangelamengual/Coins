@@ -1,6 +1,7 @@
 package es.hulk.coins.menus.rank;
 
 import es.hulk.coins.menus.CoinsMenu;
+import es.hulk.coins.menus.RankMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
@@ -41,12 +42,8 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (RankUtils.hasRank(player, "Etoirir")) {
-                        RankUtils.setTempRank(player, "Etoirir");
-                        CoinsUtils.removeCoins(player, 2000);
-                        return;
-                    }
-                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    RankUtils.setTempRank(player, "Etoirir");
+                    CoinsUtils.removeCoins(player, 2000);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -62,12 +59,8 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (RankUtils.hasRank(player, "Blaze")) {
-                        RankUtils.setTempRank(player, "Blaze");
-                        CoinsUtils.removeCoins(player, 2000);
-                        return;
-                    }
-                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    RankUtils.setTempRank(player, "Blaze");
+                    CoinsUtils.removeCoins(player, 2000);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -83,12 +76,8 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (RankUtils.hasRank(player, "Rex")) {
-                        RankUtils.setTempRank(player, "Rex");
-                        CoinsUtils.removeCoins(player, 2000);
-                        return;
-                    }
-                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    RankUtils.setTempRank(player, "Rex");
+                    CoinsUtils.removeCoins(player, 2000);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -104,12 +93,8 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (RankUtils.hasRank(player, "Errier")) {
-                        RankUtils.setTempRank(player, "Errier");
-                        CoinsUtils.removeCoins(player, 2000);
-                        return;
-                    }
-                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    RankUtils.setTempRank(player, "Errier");
+                    CoinsUtils.removeCoins(player, 2000);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -125,19 +110,15 @@ public class TempRankMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    if (RankUtils.hasRank(player, "Crowl")) {
-                        RankUtils.setTempRank(player, "Crowl");
-                        CoinsUtils.removeCoins(player, 2000);
-                        return;
-                    }
-                    player.sendMessage(Utils.color("&cYou have the same or higher rank!"));
+                    RankUtils.setTempRank(player, "Crowl");
+                    CoinsUtils.removeCoins(player, 2000);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
             }
         });
 
-        buttons.put(22, new BackButton(new CoinsMenu()));
+        buttons.put(22, new BackButton(new RankMenu()));
 
         return buttons;
     }

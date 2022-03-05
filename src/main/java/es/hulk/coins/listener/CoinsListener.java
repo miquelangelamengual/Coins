@@ -27,7 +27,7 @@ public class CoinsListener implements Listener {
         }
     }
 
-    private ItemStack giveItem() {
+    public static ItemStack giveItem() {
         return new ItemBuilder(Material.getMaterial(Coins.get().getMainConfig().getString("JOIN_ITEM.MATERIAL")))
                 .data(Coins.get().getMainConfig().getInt("JOIN_ITEM.DATA"))
                 .lore(Coins.get().getMainConfig().getStringList("JOIN_ITEM.LORE"))

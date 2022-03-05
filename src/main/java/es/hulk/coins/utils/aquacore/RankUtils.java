@@ -1,6 +1,7 @@
 package es.hulk.coins.utils.aquacore;
 
 import me.activated.core.api.player.PlayerData;
+import me.activated.core.api.rank.grant.Grant;
 import me.activated.core.plugin.AquaCoreAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -20,9 +21,12 @@ public class RankUtils {
         playerData.getHighestGrant().setRankName(rank);
     }
 
-    public static boolean hasRank(Player player, String rank) {
+    public static boolean hasRank(Player player) {
         PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
-        return playerData.getHighestGrant().getRankName().equalsIgnoreCase(rank);
+        for (Grant grant : playerData.getGrants()) {
+            return grant.isActive();
+        }
+        return false;
     }
 
 }
