@@ -107,6 +107,18 @@ public class CoinsMenu extends Menu {
             }
         });
 
+        buttons.put(23, new Button() {
+            @Override
+            public ItemStack getButtonItem(Player p0) {
+                return new ItemBuilder(Material.NAME_TAG).name("&bTags").build();
+            }
+
+            @Override
+            public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
+                new TagsMenu().openMenu(player);
+            }
+        });
+
         return buttons;
     }
 }
