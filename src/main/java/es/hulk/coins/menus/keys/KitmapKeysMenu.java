@@ -41,7 +41,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(11).name("&eReward Key").lore(Arrays.asList("This keys belong to kitmap", "If you buy it on other sites the coins will be removed", "Cost: ")).build();
+                return new ItemBuilder(Material.INK_SACK).data(11).name("&eReward Key").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override
@@ -53,7 +53,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(12, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(1).name("&cBlaze Key").lore(Arrays.asList("This keys belong to kitmap", "If you buy it on other sites the coins will be removed", "Cost: ")).build();
+                return new ItemBuilder(Material.INK_SACK).data(1).name("&cBlaze Key").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override
@@ -65,7 +65,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(13, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(9).name("&eSpecial Key").lore(Arrays.asList("This keys belong to kitmap", "If you buy it on other sites the coins will be removed", "Cost: ")).build();
+                return new ItemBuilder(Material.INK_SACK).data(9).name("&eSpecial Key").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override
@@ -77,7 +77,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(14, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(12).name("&bRoyale Key").lore(Arrays.asList("This keys belong to kitmap", "If you buy it on other sites the coins will be removed", "Cost: ")).build();
+                return new ItemBuilder(Material.INK_SACK).data(12).name("&bRoyale Key").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override
@@ -89,7 +89,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.GOLD_NUGGET).name("&4Event Key").lore(Arrays.asList("This keys belong to kitmap", "If you buy it on other sites the coins will be removed", "Cost: ")).build();
+                return new ItemBuilder(Material.GOLD_NUGGET).name("&4Event Key").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override
@@ -101,7 +101,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(21, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.ENDER_CHEST).name("&5Special Box").lore(Arrays.asList("This keys belong to kitmap", "If you buy it on other sites the coins will be removed", "Cost: ")).build();
+                return new ItemBuilder(Material.ENDER_CHEST).name("&5Special Box").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override
@@ -115,7 +115,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(23, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.BEACON).name("&4Draco Lootchest").lore(Arrays.asList("This keys belong to kitmap", "If you buy it on other sites the coins will be removed", "Cost: ")).build();
+                return new ItemBuilder(Material.BEACON).name("&4Draco Lootchest").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override

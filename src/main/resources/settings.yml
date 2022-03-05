@@ -9,4 +9,4 @@ JOIN_ITEM:
     - "&7&oRight click to join the shop"
     - ""
 
-GIVE_JOIN_ITEM: true
+GIVE_JOIN_ITEM: false
