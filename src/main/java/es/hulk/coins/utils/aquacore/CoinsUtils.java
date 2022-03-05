@@ -2,7 +2,6 @@ package es.hulk.coins.utils.aquacore;
 
 import me.activated.core.api.player.PlayerData;
 import me.activated.core.plugin.AquaCoreAPI;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public class CoinsUtils {

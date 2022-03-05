@@ -7,7 +7,6 @@ import es.hulk.coins.utils.command.CommandManager;
 import es.hulk.coins.utils.menu.ButtonListener;
 import lombok.Getter;
 import lombok.Setter;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;

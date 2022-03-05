@@ -5,7 +5,6 @@ import es.hulk.coins.utils.menu.Menu;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class GkitsMenu extends Menu
