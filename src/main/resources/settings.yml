@@ -1,0 +1,12 @@
+JOIN_ITEM:
+  DISPLAYNAME: "&3Coins Shop &7(Right Click)"
+  MATERIAL: DIAMOND_SWORD
+  DATA: 0
+  SLOT: 5
+  AMOUNT: 1
+  LORE:
+    - ""
+    - "&7&oRight click to join the shop"
+    - ""
+
+GIVE_JOIN_ITEM: true

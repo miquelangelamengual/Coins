@@ -17,16 +17,22 @@ public class CoinsListener implements Listener {
     @EventHandler
     public void giveItem(PlayerJoinEvent event) {
         Player player = event.getPlayer();
-        new BukkitRunnable() {
-            @Override
-            public void run() {
-                player.getInventory().setItem(4, giveItem());
-            }
-        }.runTaskLaterAsynchronously(Coins.get(), 20L);
+        if (Coins.get().getMainConfig().getBoolean("GIVE_JOIN_ITEM")) {
+            new BukkitRunnable() {
+                @Override
+                public void run() {
+                    player.getInventory().setItem(Coins.get().getMainConfig().getInt("JOIN_ITEM.SLOT") - 1, giveItem());
+                }
+            }.runTaskLaterAsynchronously(Coins.get(), 20L);
+        }
     }
 
     private ItemStack giveItem() {
-        return new ItemBuilder(Material.CHEST).name("&6Coins Shop &7(Right Click)").build();
+        return new ItemBuilder(Material.getMaterial(Coins.get().getMainConfig().getString("JOIN_ITEM.MATERIAL")))
+                .data(Coins.get().getMainConfig().getInt("JOIN_ITEM.DATA"))
+                .lore(Coins.get().getMainConfig().getStringList("JOIN_ITEM.LORE"))
+                .amount(Coins.get().getMainConfig().getInt("JOIN_ITEM.AMOUNT"))
+                .name(Coins.get().getMainConfig().getString("JOIN_ITEM.DISPLAYNAME")).build();
     }
 
     @EventHandler

@@ -2,6 +2,7 @@ package es.hulk.coins;
 
 import es.hulk.coins.commands.*;
 import es.hulk.coins.listener.CoinsListener;
+import es.hulk.coins.utils.FileConfig;
 import es.hulk.coins.utils.command.CommandManager;
 import es.hulk.coins.utils.menu.ButtonListener;
 import lombok.Getter;
@@ -16,14 +17,15 @@ import java.util.ArrayList;
 public class Coins extends JavaPlugin {
 
     private CommandManager commandManager;
+    private FileConfig mainConfig;
 
     @Override
     public void onEnable() {
+        this.mainConfig = new FileConfig(this, "settings.yml");
         this.commandManager = new CommandManager(this, new ArrayList<>());
-        PluginManager pm = getServer().getPluginManager();
-        pm.registerEvents(new ButtonListener(), this);
-        pm.registerEvents(new CoinsListener(), this);
-        loadCommands();
+
+        this.loadCommands();
+        this.loadListeners();
     }
 
     public void loadCommands() {
@@ -33,6 +35,11 @@ public class Coins extends JavaPlugin {
         new CoinsRemoveCommand();
         new CoinsSetCommand();
         new CoinsResetCommand();
+    }
+
+    public void loadListeners() {
+        this.getServer().getPluginManager().registerEvents(new ButtonListener(), this);
+        this.getServer().getPluginManager().registerEvents(new CoinsListener(), this);
     }
 
     @Override
