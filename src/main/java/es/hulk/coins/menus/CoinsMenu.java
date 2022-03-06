@@ -3,6 +3,7 @@ package es.hulk.coins.menus;
 import es.hulk.coins.menus.gkits.KitmapGkitsMenu;
 import es.hulk.coins.menus.keys.KitmapKeysMenu;
 import es.hulk.coins.utils.ItemBuilder;
+import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -117,7 +118,8 @@ public class CoinsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                new TagsMenu().openMenu(player);
+                player.sendMessage(Utils.color("&4&lUNDER CONSTRUCTION"));
+                //new TagsMenu().openMenu(player);
             }
         });
 
