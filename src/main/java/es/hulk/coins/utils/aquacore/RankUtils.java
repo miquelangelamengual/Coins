@@ -31,7 +31,7 @@ public class RankUtils {
     }
 
     public static void givePermission(Player player, String permission) {
-        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "setperm " + player.getName() + " " + permission);
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "setperm " + player.getName() + " " + permission + " true");
     }
 
 }

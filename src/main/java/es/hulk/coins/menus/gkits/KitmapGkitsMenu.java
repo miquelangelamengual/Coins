@@ -51,6 +51,7 @@ public class KitmapGkitsMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.givePermission(player, "pandagkit.gkit.Monthly");
                     CoinsUtils.removeCoins(player, 2000);
+                    player.sendMessage(Utils.color("&aYou have bought Monthly GKit"));
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -68,6 +69,7 @@ public class KitmapGkitsMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.givePermission(player, "pandagkit.gkit.Crowl");
                     CoinsUtils.removeCoins(player, 2000);
+                    player.sendMessage(Utils.color("&aYou have bought Crowl GKit"));
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -85,6 +87,7 @@ public class KitmapGkitsMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.givePermission(player, "pandagkit.gkit.Rogue+");
                     CoinsUtils.removeCoins(player, 2000);
+                    player.sendMessage(Utils.color("&aYou have bought Rogue+ GKit"));
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -102,6 +105,7 @@ public class KitmapGkitsMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.givePermission(player, "pandagkit.gkit.Diamond+");
                     CoinsUtils.removeCoins(player, 2000);
+                    player.sendMessage(Utils.color("&aYou have bought Diamond+ GKit"));
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -119,6 +123,7 @@ public class KitmapGkitsMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.givePermission(player, "pandagkit.gkit.Kitting");
                     CoinsUtils.removeCoins(player, 2000);
+                    player.sendMessage(Utils.color("&aYou have bought Kitting GKit"));
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -136,6 +141,7 @@ public class KitmapGkitsMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.givePermission(player, "pandagkit.gkit.Archer+");
                     CoinsUtils.removeCoins(player, 2000);
+                    player.sendMessage(Utils.color("&aYou have bought Archer+ GKit"));
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -153,6 +159,7 @@ public class KitmapGkitsMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.givePermission(player, "pandagkit.gkit.Bard+");
                     CoinsUtils.removeCoins(player, 2000);
+                    player.sendMessage(Utils.color("&aYou have bought Bard+ GKit"));
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
