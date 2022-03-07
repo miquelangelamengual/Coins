@@ -46,7 +46,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(11).name("&eReward Key").lore(Arrays.asList("&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.INK_SACK).data(11).name("&e&lReward Key").lore(Arrays.asList("","&fThis keys belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
             }
 
             @Override

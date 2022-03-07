@@ -43,14 +43,14 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(3, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(9).name("&dMonthly GKit").lore(Arrays.asList("&fThis Gkit belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.INK_SACK).data(9).name("&d&lMonthly &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃500 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
-                    RankUtils.givePermission(player, "pandagkit.gkit.Monthly");
-                    CoinsUtils.removeCoins(player, 2000);
+                if (CoinsUtils.getCoins(player) >= 500) {
+                    RankUtils.givePermission(player, "gkit.Monthly");
+                    CoinsUtils.removeCoins(player, 500);
                     player.sendMessage(Utils.color("&aYou have bought Monthly GKit"));
                     return;
                 }
@@ -61,14 +61,14 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(5, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(12).name("&bCrowl GKit").lore(Arrays.asList("&fThis Gkit belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.INK_SACK).data(12).name("&3&lCrowl &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃500 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
-                    RankUtils.givePermission(player, "pandagkit.gkit.Crowl");
-                    CoinsUtils.removeCoins(player, 2000);
+                if (CoinsUtils.getCoins(player) >= 500) {
+                    RankUtils.givePermission(player, "gkit.Crowl");
+                    CoinsUtils.removeCoins(player, 500);
                     player.sendMessage(Utils.color("&aYou have bought Crowl GKit"));
                     return;
                 }
@@ -79,14 +79,14 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.CHAINMAIL_CHESTPLATE).name("&7Rogue+ GKit").lore(Arrays.asList("&fThis Gkit belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.CHAINMAIL_CHESTPLATE).name("&8&lRogue+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
-                    RankUtils.givePermission(player, "pandagkit.gkit.Rogue+");
-                    CoinsUtils.removeCoins(player, 2000);
+                if (CoinsUtils.getCoins(player) >= 250) {
+                    RankUtils.givePermission(player, "gkit.Rogue+");
+                    CoinsUtils.removeCoins(player, 250);
                     player.sendMessage(Utils.color("&aYou have bought Rogue+ GKit"));
                     return;
                 }
@@ -97,13 +97,13 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(12, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.DIAMOND_CHESTPLATE).name("&9Diamond+ GKit").lore(Arrays.asList("&fThis Gkit belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.DIAMOND_CHESTPLATE).name("&b&lDiamond+ &9&LGKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    RankUtils.givePermission(player, "pandagkit.gkit.Diamond+");
+                    RankUtils.givePermission(player, "gkit.Diamond+");
                     CoinsUtils.removeCoins(player, 2000);
                     player.sendMessage(Utils.color("&aYou have bought Diamond+ GKit"));
                     return;
@@ -115,14 +115,14 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(13, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.DIAMOND_PICKAXE).name("&fKitting GKit").lore(Arrays.asList("&fThis Gkit belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.DIAMOND_PICKAXE).name("&fKitting GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃150 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
-                    RankUtils.givePermission(player, "pandagkit.gkit.Kitting");
-                    CoinsUtils.removeCoins(player, 2000);
+                if (CoinsUtils.getCoins(player) >= 150) {
+                    RankUtils.givePermission(player, "gkit.Kitting");
+                    CoinsUtils.removeCoins(player, 150);
                     player.sendMessage(Utils.color("&aYou have bought Kitting GKit"));
                     return;
                 }
@@ -133,14 +133,14 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(14, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.LEATHER_CHESTPLATE).name("&5Archer+ GKit").lore(Arrays.asList("&fThis Gkit belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.LEATHER_CHESTPLATE).name("&5&lArcher+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
-                    RankUtils.givePermission(player, "pandagkit.gkit.Archer+");
-                    CoinsUtils.removeCoins(player, 2000);
+                if (CoinsUtils.getCoins(player) >= 250) {
+                    RankUtils.givePermission(player, "gkit.Archer+");
+                    CoinsUtils.removeCoins(player, 250);
                     player.sendMessage(Utils.color("&aYou have bought Archer+ GKit"));
                     return;
                 }
@@ -151,13 +151,13 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.GOLD_CHESTPLATE).name("&6Bard+ GKit").lore(Arrays.asList("&fThis Gkit belong to kitmap", "&fIf you buy it on other sites the coins will be removed", "&fCost: ")).build();
+                return new ItemBuilder(Material.GOLD_CHESTPLATE).name("&6&lBard+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (CoinsUtils.getCoins(player) >= 2000) {
-                    RankUtils.givePermission(player, "pandagkit.gkit.Bard+");
+                    RankUtils.givePermission(player, "gkit.Bard+");
                     CoinsUtils.removeCoins(player, 2000);
                     player.sendMessage(Utils.color("&aYou have bought Bard+ GKit"));
                     return;
