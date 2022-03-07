@@ -36,14 +36,14 @@ public class PermRankMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(4).name("&bEtoirir").lore(Arrays.asList("&eThis rank is permanent", "", "&eCost: 250 coins")).build();
+                return new ItemBuilder(Material.INK_SACK).data(4).name("&9&lEtoirir &7Rank").lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃250 coins", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
+                if (CoinsUtils.getCoins(player) >= 250) {
                     RankUtils.setPermRank(player, "Etoirir");
-                    CoinsUtils.removeCoins(player, 2000);
+                    CoinsUtils.removeCoins(player, 250);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -53,14 +53,14 @@ public class PermRankMenu extends Menu {
         buttons.put(12, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("&eThis rank is permanent", "", "&eCost: 500 coins")).name("&bBlaze").build();
+                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃500 coins", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&c&lBlaze Rank").build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
+                if (CoinsUtils.getCoins(player) >= 500) {
                     RankUtils.setPermRank(player, "Blaze");
-                    CoinsUtils.removeCoins(player, 2000);
+                    CoinsUtils.removeCoins(player, 500);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -70,14 +70,14 @@ public class PermRankMenu extends Menu {
         buttons.put(13, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(14).lore(Arrays.asList("&eThis rank is permanent", "", "&eCost: 750 coins")).name("&bRex").build();
+                return new ItemBuilder(Material.INK_SACK).data(14).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃750 coins", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&6&lRex &7Rank").build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
+                if (CoinsUtils.getCoins(player) >= 750) {
                     RankUtils.setPermRank(player, "Rex");
-                    CoinsUtils.removeCoins(player, 2000);
+                    CoinsUtils.removeCoins(player, 750);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -87,14 +87,14 @@ public class PermRankMenu extends Menu {
         buttons.put(14, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("&eThis rank is permanent", "", "&eCost: 1300 coins")).name("&bErrier").build();
+                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃1300 coins", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&4&lErrier &7Rank").build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2000) {
+                if (CoinsUtils.getCoins(player) >= 1300) {
                     RankUtils.setPermRank(player, "Errier");
-                    CoinsUtils.removeCoins(player, 2000);
+                    CoinsUtils.removeCoins(player, 1300);
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -104,7 +104,7 @@ public class PermRankMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(12).lore(Arrays.asList("&eThis rank is permanent", "", "&eCost: 2000 coins")).name("&bCrowl").build();
+                return new ItemBuilder(Material.INK_SACK).data(12).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃2000 coins", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&b&lCrowl &7Rank").build();
             }
 
             @Override
