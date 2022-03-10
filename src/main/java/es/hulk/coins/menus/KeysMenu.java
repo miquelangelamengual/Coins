@@ -34,7 +34,7 @@ public class KeysMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(13).name("&6&lHCF Keys").build();
+                return new ItemBuilder(Material.INK_SACK).data(13).name("&b&lRoyale Keys").build();
             }
 
             @Override
@@ -47,7 +47,7 @@ public class KeysMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(9).name("&6&lKitmap Keys").build();
+                return new ItemBuilder(Material.INK_SACK).data(9).name("&b&lKitmap Keys").build();
             }
 
             @Override

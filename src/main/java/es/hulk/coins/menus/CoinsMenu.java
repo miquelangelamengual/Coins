@@ -44,7 +44,7 @@ public class CoinsMenu extends Menu {
 
                     @Override
                     public ItemStack getButtonItem(Player p0) {
-                        return new ItemBuilder(Material.ANVIL).name("&6Punishments").build();
+                        return new ItemBuilder(Material.ANVIL).name("&aPunishments").build();
                     }
 
                     @Override
@@ -57,7 +57,7 @@ public class CoinsMenu extends Menu {
         buttons.put(3, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.DIAMOND_CHESTPLATE).name("&6Kits").build();
+                return new ItemBuilder(Material.DIAMOND_CHESTPLATE).name("&aKits").build();
             }
 
             @Override
@@ -69,7 +69,7 @@ public class CoinsMenu extends Menu {
         buttons.put(5, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.EMERALD).name("&6Keys").build();
+                return new ItemBuilder(Material.EMERALD).name("&aKeys").build();
             }
 
             @Override
@@ -82,7 +82,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.DIAMOND).name("&6Ranks").build();
+                return new ItemBuilder(Material.DIAMOND).name("&aRanks").build();
             }
 
             @Override
@@ -94,7 +94,7 @@ public class CoinsMenu extends Menu {
         buttons.put(21, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.ENDER_PEARL).name("&bRank Upgrades").build();
+                return new ItemBuilder(Material.ENDER_PEARL).name("&aRank Upgrades").build();
             }
 
             @Override
@@ -107,7 +107,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.NETHER_STAR).name("&6Your Coins").lore(Collections.singletonList("&7You have&a &a" + CoinsUtils.getCoins(player) + " coins")).build();
+                return new ItemBuilder(Material.NETHER_STAR).name("&aYour Coins").lore(Collections.singletonList("&7You have&a &a⛃" + CoinsUtils.getCoins(player) + " coins")).build();
             }
         });
 
