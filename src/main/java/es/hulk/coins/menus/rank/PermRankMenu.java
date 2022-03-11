@@ -1,5 +1,6 @@
 package es.hulk.coins.menus.rank;
 
+import es.hulk.coins.menus.CoinsMenu;
 import es.hulk.coins.menus.RankMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
@@ -118,7 +119,7 @@ public class PermRankMenu extends Menu {
             }
         });
 
-        buttons.put(22, new BackButton(new RankMenu()));
+        buttons.put(22, new BackButton(new CoinsMenu()));
 
         return buttons;
     }
