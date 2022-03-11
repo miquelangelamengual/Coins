@@ -107,7 +107,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.NETHER_STAR).name("&aYour Coins").lore(Collections.singletonList("&7You have&a &a⛃" + CoinsUtils.getCoins(player) + " coins")).build();
+                return new ItemBuilder(Material.NETHER_STAR).name("&aYour Coins").lore(Collections.singletonList("&7You have&a &6⛃" + CoinsUtils.getCoins(player) + " coins")).build();
             }
         });
 
