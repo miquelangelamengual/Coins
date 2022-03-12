@@ -53,7 +53,7 @@ public class RankUpgradeMenu extends Menu {
         buttons.put(12, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.PAPER).name("Blaze » Rex").lore(Arrays.asList("", "&fThis rank upgrade is &cpermanent&7.", "", "&fCost: &6⛃350 coins", "", "&7&oSee the advantages of this rank", "", "&7&oin crowl.club/discord &7-&o ranks channel", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.PAPER).name("&cBlaze &8» &6Rex").lore(Arrays.asList("", "&fThis rank upgrade is &cpermanent&7.", "", "&fCost: &6⛃350 coins", "", "&7&oSee the advantages of this rank", "", "&7&oin crowl.club/discord &7-&o ranks channel", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -70,7 +70,7 @@ public class RankUpgradeMenu extends Menu {
         buttons.put(14, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.PAPER).name("Rex » Errier").lore(Arrays.asList("", "&fThis rank upgrade is &cpermanent&7.", "", "&fCost: &6⛃620 coins", "", "&7&oSee the advantages of this rank", "", "&7&oin crowl.club/discord &7-&o ranks channel", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.PAPER).name("&6Rex » &4Errier").lore(Arrays.asList("", "&fThis rank upgrade is &cpermanent&7.", "", "&fCost: &6⛃620 coins", "", "&7&oSee the advantages of this rank", "", "&7&oin crowl.club/discord &7-&o ranks channel", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -87,7 +87,7 @@ public class RankUpgradeMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.PAPER).name("Errier » Crowl").lore(Arrays.asList("", "&fThis rank upgrade is &cpermanent&7.", "", "&fCost: &6⛃850 coins", "", "&7&oSee the advantages of this rank", "", "&7&oin crowl.club/discord &7-&o ranks channel", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.PAPER).name("&4Errier &8» &bCrowl").lore(Arrays.asList("", "&fThis rank upgrade is &cpermanent&7.", "", "&fCost: &6⛃850 coins", "", "&7&oSee the advantages of this rank", "", "&7&oin crowl.club/discord &7-&o ranks channel", "&a&lClick to purchase it")).build();
             }
 
             @Override
