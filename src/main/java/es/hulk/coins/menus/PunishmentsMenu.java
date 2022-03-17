@@ -12,6 +12,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,15 +35,15 @@ public class PunishmentsMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.LAVA_BUCKET).name("&c&lNetwork Unban").build();
+                return new ItemBuilder(Material.LAVA_BUCKET).name("&c&lNetwork Unban").lore(Arrays.asList("", "")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 2500) {
+                if (CoinsUtils.getCoins(player) >= 1250) {
                     if (PunishmentsUtils.isBanned(player)) {
                         PunishmentsUtils.setUnBan(player);
-                        CoinsUtils.removeCoins(player, 2500);
+                        CoinsUtils.removeCoins(player, 1250);
                         player.sendMessage(Utils.color("&aYou have been unbanned from the network!"));
                         return;
                     }
@@ -61,10 +62,10 @@ public class PunishmentsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (CoinsUtils.getCoins(player) >= 1500) {
+                if (CoinsUtils.getCoins(player) >= 750) {
                     if (PunishmentsUtils.isMuted(player)) {
                         PunishmentsUtils.setUnMute(player);
-                        CoinsUtils.removeCoins(player, 1500);
+                        CoinsUtils.removeCoins(player, 750);
                         player.sendMessage(Utils.color("&aYou have been unmuted from the network!"));
                         return;
                     }
