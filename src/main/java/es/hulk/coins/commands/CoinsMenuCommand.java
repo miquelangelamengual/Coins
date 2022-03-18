@@ -7,7 +7,7 @@ import es.hulk.coins.utils.command.CommandArgs;
 
 public class CoinsMenuCommand extends BaseCommand {
 
-    @Command(name = "shop", aliases = {"menu", "coinsmenu", "coins.menu"})
+    @Command(name = "shop", aliases = {"menu", "coinsmenu", "coins.menu", "coins.shop", "coins.store", "coinsshop", "coinsstore"})
 
     @Override
     public void onCommand(CommandArgs command) {

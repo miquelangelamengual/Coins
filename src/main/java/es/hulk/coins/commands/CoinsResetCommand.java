@@ -31,7 +31,7 @@ public class CoinsResetCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.resetCoins(target);
-                    player.sendMessage("§cYou have reset coins of §f" + target.getName() + ".");
+                    player.sendMessage("§eYou have reset coins of §c" + target.getName() + "&7.");
                 } else {
                     player.sendMessage("§cPlayer not found.");
                 }

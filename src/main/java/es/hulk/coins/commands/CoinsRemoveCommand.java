@@ -27,7 +27,7 @@ public class CoinsRemoveCommand extends BaseCommand {
             try {
                 int amount = Integer.parseInt(args[0]);
                 CoinsUtils.removeCoins(player, amount);
-                player.sendMessage("§6You have removed §f" + amount + " §6coins to your account.");
+                player.sendMessage("§eYou have removed §6⛃" + amount + " §ecoins to your account&7.");
             } catch (NumberFormatException e) {
                 player.sendMessage("§cInvalid number.");
             }
@@ -40,7 +40,7 @@ public class CoinsRemoveCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.removeCoins(target, amount);
-                    player.sendMessage("§6You have removed §f" + amount + " §6coins to §f" + args[0]);
+                    player.sendMessage("§eYou have removed §6⛃" + amount + " §ecoins to §f" + args[0] +"&7.");
                 } else {
                     player.sendMessage("§cPlayer not found.");
                 }

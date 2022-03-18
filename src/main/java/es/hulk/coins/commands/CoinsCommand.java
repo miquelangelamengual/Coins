@@ -21,6 +21,6 @@ public class CoinsCommand extends BaseCommand {
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
 
-        player.sendMessage("§aYou have §e" + CoinsUtils.getCoins(player) + " §acoins.");
+        player.sendMessage("§eYou have §6⛃" + CoinsUtils.getCoins(player) + " §ecoins&7.");
     }
 }

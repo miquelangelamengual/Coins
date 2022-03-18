@@ -20,7 +20,7 @@ public class CoinsSetCommand extends BaseCommand {
             try {
                 int amount = Integer.parseInt(args[0]);
                 CoinsUtils.setCoins(player, amount);
-                player.sendMessage("§aYou have set §f" + amount + " §acoins to your account.");
+                player.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to your account&7.");
             } catch (NumberFormatException e) {
                 player.sendMessage("§cInvalid number.");
             }
@@ -33,7 +33,7 @@ public class CoinsSetCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.setCoins(target, amount);
-                    player.sendMessage("§aYou have set §f" + amount + " §acoins to §f" + args[0]);
+                    player.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to §f" + args[0] + "&7.");
                 } else {
                     player.sendMessage("§cPlayer not found.");
                 }

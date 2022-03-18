@@ -27,7 +27,7 @@ public class CoinsAddCommand extends BaseCommand {
             try {
                 int amount = Integer.parseInt(args[0]);
                 CoinsUtils.addCoins(player, amount);
-                player.sendMessage("§aYou have added §f" + amount + " §acoins to your account.");
+                player.sendMessage("§aYou have added §6⛃" + amount + " §acoins to your account&7.");
             } catch (NumberFormatException e) {
                 player.sendMessage("§cInvalid number.");
             }
@@ -40,7 +40,7 @@ public class CoinsAddCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.addCoins(target, amount);
-                    player.sendMessage("§aYou have added §f" + amount + " §acoins to §f" + args[0]);
+                    player.sendMessage("§eYou have added §6⛃" + amount + " §ecoins to §f" + args[0] + "&7.");
                 } else {
                     player.sendMessage("§cPlayer not found.");
                 }
