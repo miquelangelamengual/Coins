@@ -35,7 +35,7 @@ public class PunishmentsMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.LAVA_BUCKET).name("&c&lNetwork Unban").lore(Arrays.asList("", "")).build();
+                return new ItemBuilder(Material.LAVA_BUCKET).name("&c&lNetwork Unban").lore(Arrays.asList("", "&fCost: &6⛃1250 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -57,7 +57,7 @@ public class PunishmentsMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.WATER_BUCKET).name("&c&lNetwork Unmute").build();
+                return new ItemBuilder(Material.WATER_BUCKET).name("&c&lNetwork Unmute").lore(Arrays.asList("", "&fCost: &6⛃750 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
