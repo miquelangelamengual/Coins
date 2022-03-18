@@ -9,6 +9,7 @@ import es.hulk.coins.utils.menu.ButtonListener;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class Coins extends JavaPlugin {
     private boolean isCratesEnabled = false;
     private boolean isAdvanced = false;
 
+    public ItemStack coinsItem;
     private Crates crates;
 
     @Override

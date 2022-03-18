@@ -90,16 +90,16 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(13, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(9).name("&d&lSpecial &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a12 keys", "&fCost: &6⛃125 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(9).name("&d&lMagic &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a12 keys", "&fCost: &6⛃125 coins", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 if (Coins.get().isCratesEnabled()) {
                     if (CoinsUtils.getCoins(player) >= 125) {
-                        Coins.get().getCrates().getCrateManager().giveKeyPlayer("Special", 12, player);
+                        Coins.get().getCrates().getCrateManager().giveKeyPlayer("Magic", 12, player);
                         CoinsUtils.removeCoins(player, 125);
-                        player.sendMessage(Utils.color("&aYou bought &lx12&a Special Key"));
+                        player.sendMessage(Utils.color("&aYou bought &lx12&a Magic Key"));
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));
