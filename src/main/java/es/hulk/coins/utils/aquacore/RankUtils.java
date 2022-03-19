@@ -22,10 +22,14 @@ public class RankUtils {
         playerData.getHighestGrant().setRankName(rank);
     }
 
-    public static boolean hasRank(Player player) {
+    public static boolean hasRank(Player player, String rank) {
         PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
         for (Grant grant : playerData.getGrants()) {
-            return grant.isActive();
+            if (grant.getRankName().equals(rank)) {
+                if (grant.isActive()) {
+                    return true;
+                }
+            }
         }
         return false;
     }

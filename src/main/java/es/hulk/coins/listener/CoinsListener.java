@@ -31,7 +31,7 @@ public class CoinsListener implements Listener {
                 public void run() {
                     player.getInventory().setItem(Coins.get().getMainConfig().getInt("JOIN_ITEM.SLOT") - 1, item);
                 }
-            }.runTaskLaterAsynchronously(Coins.get(), 20L);
+            }.runTaskLaterAsynchronously(Coins.get(), 30L);
         }
     }
 
