@@ -120,7 +120,6 @@ public class CoinsMenu extends Menu {
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
                 player.sendMessage(Utils.color("&4&lUNDER CONSTRUCTION"));
-                //new TagsMenu().openMenu(player);
             }
         });
 

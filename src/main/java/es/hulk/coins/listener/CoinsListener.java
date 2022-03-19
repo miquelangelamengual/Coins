@@ -4,11 +4,14 @@ import es.hulk.coins.Coins;
 import es.hulk.coins.menus.CoinsMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import lombok.Getter;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntitySpawnEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
@@ -16,7 +19,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class CoinsListener implements Listener {
 
-    @Getter private static ItemStack item;
+    @Getter
+    private static ItemStack item;
 
     @EventHandler
     public void giveItem(PlayerJoinEvent event) {
