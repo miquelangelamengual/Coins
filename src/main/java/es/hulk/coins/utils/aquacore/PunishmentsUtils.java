@@ -3,6 +3,7 @@ package es.hulk.coins.utils.aquacore;
 import me.activated.core.api.player.PlayerData;
 import me.activated.core.api.player.PunishData;
 import me.activated.core.plugin.AquaCoreAPI;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 public class PunishmentsUtils {
@@ -17,6 +18,10 @@ public class PunishmentsUtils {
         PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
         PunishData punishData = playerData.getPunishData();
         punishData.getActiveBan().delete();
+    }
+
+    public static void setBan(Player player) {
+        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "ban " + player.getName() + " 10s Comandos Ilegales");
     }
 
     public static boolean isBanned(Player player) {

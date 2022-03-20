@@ -38,4 +38,9 @@ public class RankUtils {
         Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "setperm " + player.getName() + " " + permission + " true");
     }
 
+    public static String getRankName(Player player) {
+        PlayerData playerData = AquaCoreAPI.INSTANCE.getPlayerData(player.getUniqueId());
+        return playerData.getHighestGrant().getRankName();
+    }
+
 }

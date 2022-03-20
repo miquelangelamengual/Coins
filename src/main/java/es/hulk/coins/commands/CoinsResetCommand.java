@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsResetCommand extends BaseCommand {
 
-    @Command(name = "coins.remove", permission = "coins.command.remove")
+    @Command(name = "coins.reset", permission = "coins.command.reset")
 
     @Override
     public void onCommand(CommandArgs command) {
