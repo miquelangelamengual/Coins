@@ -21,15 +21,16 @@ public class CoinsHelpCommand extends BaseCommand {
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
 
-        player.sendMessage(CC.translate(""));
-        player.sendMessage(CC.translate("/coins add <player> <coins>"));
-        player.sendMessage(CC.translate("/coins add <coins>"));
-        player.sendMessage(CC.translate(""));
-        player.sendMessage(CC.translate("/coins remove <player> <coins>"));
-        player.sendMessage(CC.translate("/coins remove <coins>"));
-        player.sendMessage(CC.translate(""));
-        player.sendMessage(CC.translate("/coins reset <player>"));
-        player.sendMessage(CC.translate("/coins set <player>"));
-        player.sendMessage(CC.translate(""));
+        player.sendMessage(CC.translate("&7&m---------------------------------------------------"));
+        player.sendMessage(CC.translate("&b&lCrowl Coins &7- &fInformation on how to use Crowl Coins"));
+        player.sendMessage(CC.translate("&7&m---------------------------------------------------"));
+        player.sendMessage(CC.translate("&b&l❄ Staff Commands:"));
+        player.sendMessage(CC.translate(" &7- &f/coins add <player> <coins>&7: &7Add coins to a user"));
+        player.sendMessage(CC.translate(" &7- &f/coins add <coins>&7: &7Add coins to yourself"));
+        player.sendMessage(CC.translate(" &7- &f/coins remove <player> <coins>&7: &7Remove coins to a user"));
+        player.sendMessage(CC.translate(" &7- &f/coins remove <coins>&7: &7Remove coins to yourself"));
+        player.sendMessage(CC.translate(" &7- &f/coins reset <player>&7: &7Reset all coins of a user"));
+        player.sendMessage(CC.translate(" &7- &f/coins set <player>&7: &7Set the number of coins of a user"));
+        player.sendMessage(CC.translate("&7&m---------------------------------------------------"));
     }
 }
