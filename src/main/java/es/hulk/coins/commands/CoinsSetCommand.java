@@ -31,7 +31,7 @@ public class CoinsSetCommand extends BaseCommand {
             try {
                 OfflinePlayer target = Bukkit.getPlayer(args[0]);
                 int amount = Integer.parseInt(args[1]);
-c
+
                 if (target != null) {
                     CoinsUtils.setCoins(target, amount);
                     player.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to §f" + args[0] + "&7.");
