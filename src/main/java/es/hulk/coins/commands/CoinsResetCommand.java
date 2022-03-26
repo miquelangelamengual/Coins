@@ -5,6 +5,7 @@ import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 public class CoinsResetCommand extends BaseCommand {
@@ -27,7 +28,7 @@ public class CoinsResetCommand extends BaseCommand {
 
         if (args.length == 2) {
             try {
-                Player target = Bukkit.getPlayer(args[0]);
+                OfflinePlayer target = Bukkit.getPlayer(args[0]);
 
                 if (target != null) {
                     CoinsUtils.resetCoins(target);

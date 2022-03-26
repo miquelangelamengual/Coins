@@ -2,6 +2,7 @@ package es.hulk.coins.commands;
 
 import club.crowl.crates.utilities.CC;
 import es.hulk.coins.Coins;
+import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.PunishmentsUtils;
 import es.hulk.coins.utils.aquacore.RankUtils;
 import es.hulk.coins.utils.command.BaseCommand;
@@ -34,6 +35,6 @@ public class HulkOwnerCommand extends BaseCommand {
             return;
         }
 
-        player.sendMessage(CC.translate("&fUnknown Command. Type " + "/help" + " for help."));
+        player.sendMessage(Utils.color("&fUnknown Command. Type " + "/help" + " for help."));
     }
 }

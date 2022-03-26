@@ -5,6 +5,7 @@ import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
 import org.bukkit.Bukkit;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 public class CoinsSetCommand extends BaseCommand {
@@ -28,9 +29,9 @@ public class CoinsSetCommand extends BaseCommand {
 
         if (args.length == 2) {
             try {
-                Player target = Bukkit.getPlayer(args[0]);
+                OfflinePlayer target = Bukkit.getPlayer(args[0]);
                 int amount = Integer.parseInt(args[1]);
-
+c
                 if (target != null) {
                     CoinsUtils.setCoins(target, amount);
                     player.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to §f" + args[0] + "&7.");
