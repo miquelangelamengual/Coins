@@ -4,8 +4,6 @@ import es.hulk.coins.listener.CoinsListener;
 import es.hulk.coins.menus.CoinsMenu;
 import org.bukkit.entity.Player;
 
-import static es.hulk.coins.listener.CoinsListener.giveItem;
-
 /**
  * Created by Hulk
  * at 05/03/2022 10:11

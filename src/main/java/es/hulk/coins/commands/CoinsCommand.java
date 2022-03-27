@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsCommand extends BaseCommand {
 
-    @Command(name = "coins", aliases = {"coin", "money"}, usage = "coins", description = "Shows the amount of coins you have.")
+    @Command(name = "coins", aliases = {"coin", "money"}, usage = "coins", description = "Shows the amount of coins you have.", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {

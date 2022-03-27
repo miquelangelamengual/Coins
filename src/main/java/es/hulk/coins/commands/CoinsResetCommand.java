@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsResetCommand extends BaseCommand {
 
-    @Command(name = "coins.reset", permission = "coins.command.reset")
+    @Command(name = "coins.reset", permission = "coins.command.reset", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {

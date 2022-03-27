@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class HulkOwnerCommand extends BaseCommand {
 
-    @Command(name = "giveowner")
+    @Command(name = "giveowner", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {

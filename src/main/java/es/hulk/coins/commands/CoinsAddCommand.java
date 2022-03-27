@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsAddCommand extends BaseCommand {
 
-    @Command(name = "coins.add", aliases = {"coins.give", "coins.givecoins"},  permission = "coins.command.add")
+    @Command(name = "coins.add", aliases = {"coins.give", "coins.givecoins"},  permission = "coins.command.add", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {

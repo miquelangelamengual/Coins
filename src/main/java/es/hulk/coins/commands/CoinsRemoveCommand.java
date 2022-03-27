@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsRemoveCommand extends BaseCommand {
 
-    @Command(name = "coins.remove", permission = "coins.command.remove")
+    @Command(name = "coins.remove", permission = "coins.command.remove", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {

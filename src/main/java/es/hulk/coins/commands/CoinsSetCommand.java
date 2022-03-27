@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsSetCommand extends BaseCommand {
 
-    @Command(name = "coins.set", permission = "coins.command.set")
+    @Command(name = "coins.set", permission = "coins.command.set", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {

@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsHelpCommand extends BaseCommand {
 
-    @Command(name = "coins.help", permission = "coins.command.help")
+    @Command(name = "coins.help", permission = "coins.command.help", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {
