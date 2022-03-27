@@ -3,7 +3,6 @@ package es.hulk.coins.utils.aquacore;
 import me.activated.core.api.player.PlayerData;
 import me.activated.core.api.rank.grant.Grant;
 import me.activated.core.plugin.AquaCoreAPI;
-import me.activated.core.values.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 

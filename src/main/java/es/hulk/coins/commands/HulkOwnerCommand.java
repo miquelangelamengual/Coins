@@ -1,18 +1,13 @@
 package es.hulk.coins.commands;
 
-import club.crowl.crates.utilities.CC;
-import es.hulk.coins.Coins;
 import es.hulk.coins.utils.Utils;
-import es.hulk.coins.utils.aquacore.PunishmentsUtils;
 import es.hulk.coins.utils.aquacore.RankUtils;
 import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Hulk

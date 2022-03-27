@@ -4,19 +4,15 @@ import club.crowl.crates.Crates;
 import es.hulk.coins.commands.*;
 import es.hulk.coins.listener.CoinsListener;
 import es.hulk.coins.utils.FileConfig;
-import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.command.CommandManager;
 import es.hulk.coins.utils.menu.ButtonListener;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Entity;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 
 @Getter
 @Setter

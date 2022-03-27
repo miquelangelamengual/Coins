@@ -1,7 +1,6 @@
 package es.hulk.coins.menus.rank;
 
 import es.hulk.coins.menus.CoinsMenu;
-import es.hulk.coins.menus.RankMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
