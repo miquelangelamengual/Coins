@@ -2,7 +2,6 @@ package es.hulk.coins.menus;
 
 import es.hulk.coins.menus.gkits.KitmapGkitsMenu;
 import es.hulk.coins.menus.keys.KitmapKeysMenu;
-import es.hulk.coins.menus.rank.PermRankMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;

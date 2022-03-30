@@ -3,6 +3,7 @@ package es.hulk.coins.menus;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
+import es.hulk.coins.utils.aquacore.PlayerUtils;
 import es.hulk.coins.utils.aquacore.PunishmentsUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -45,6 +46,7 @@ public class PunishmentsMenu extends Menu {
                         PunishmentsUtils.setUnBan(player);
                         CoinsUtils.removeCoins(player, 1250);
                         player.sendMessage(Utils.color("&aYou have been unbanned from the network!"));
+                        PlayerUtils.sendMessage(player.getName() + " has bought the network unban");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou are already unbanned!"));
@@ -67,6 +69,7 @@ public class PunishmentsMenu extends Menu {
                         PunishmentsUtils.setUnMute(player);
                         CoinsUtils.removeCoins(player, 750);
                         player.sendMessage(Utils.color("&aYou have been unmuted from the network!"));
+                        PlayerUtils.sendMessage(player.getName() + " has bought the network unmute");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou are already unmuted!"));

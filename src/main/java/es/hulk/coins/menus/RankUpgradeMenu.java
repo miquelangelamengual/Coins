@@ -3,6 +3,7 @@ package es.hulk.coins.menus;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
+import es.hulk.coins.utils.aquacore.PlayerUtils;
 import es.hulk.coins.utils.aquacore.RankUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -46,6 +47,7 @@ public class RankUpgradeMenu extends Menu {
                     if (RankUtils.hasRank(player, "Etoirir")) {
                         RankUtils.setPermRank(player, "Blaze");
                         CoinsUtils.removeCoins(player, 250);
+                        PlayerUtils.sendMessage(player.getName() + " has bought rank upgrade from Etoirir to Blaze");
                         return;
                     }
                     player.sendMessage(CC.translate("No tienes el rango Etoirir"));
@@ -69,6 +71,7 @@ public class RankUpgradeMenu extends Menu {
                             if (RankUtils.hasRank(player, "Blaze")) {
                                 RankUtils.setPermRank(player, "Rex");
                                 CoinsUtils.removeCoins(player, 350);
+                                PlayerUtils.sendMessage(player.getName() + " has bought rank upgrade from Blaze to Rex");
                                 return;
                             }
                             player.sendMessage(CC.translate("No tienes el rango Blaze"));
@@ -92,6 +95,7 @@ public class RankUpgradeMenu extends Menu {
                             if (RankUtils.hasRank(player, "Rex")) {
                                 RankUtils.setPermRank(player, "Errier");
                                 CoinsUtils.removeCoins(player, 250);
+                                PlayerUtils.sendMessage(player.getName() + " has bought rank upgrade from Rex to Errier");
                                 return;
                             }
                             player.sendMessage(CC.translate("No tienes el rango Etoirir"));
@@ -115,6 +119,7 @@ public class RankUpgradeMenu extends Menu {
                             if (RankUtils.hasRank(player, "Errier")) {
                                 RankUtils.setPermRank(player, "Crowl");
                                 CoinsUtils.removeCoins(player, 850);
+                                PlayerUtils.sendMessage(player.getName() + " has bought rank upgrade from Errier to Crowl");
                                 return;
                             }
                             player.sendMessage(CC.translate("No tienes el rango Etoirir"));

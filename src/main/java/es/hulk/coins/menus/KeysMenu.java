@@ -1,7 +1,6 @@
 package es.hulk.coins.menus;
 
-import es.hulk.coins.menus.rank.PermRankMenu;
-import es.hulk.coins.menus.rank.TempRankMenu;
+import es.hulk.coins.menus.keys.HCFKeysMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -52,7 +51,7 @@ public class KeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                new TempRankMenu().openMenu(player);
+                new HCFKeysMenu().openMenu(player);
             }
         });
 

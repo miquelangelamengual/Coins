@@ -4,6 +4,7 @@ import es.hulk.coins.menus.CoinsMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
+import es.hulk.coins.utils.aquacore.PlayerUtils;
 import es.hulk.coins.utils.aquacore.RankUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -52,6 +53,7 @@ public class KitmapGkitsMenu extends Menu {
                     RankUtils.givePermission(player, "gkit.Monthly");
                     CoinsUtils.removeCoins(player, 500);
                     player.sendMessage(Utils.color("&aYou have bought Monthly GKit"));
+                    PlayerUtils.sendMessage(player.getName() + " has bought the Monthly GKit");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -70,6 +72,7 @@ public class KitmapGkitsMenu extends Menu {
                     RankUtils.givePermission(player, "gkit.Crowl");
                     CoinsUtils.removeCoins(player, 500);
                     player.sendMessage(Utils.color("&aYou have bought Crowl GKit"));
+                    PlayerUtils.sendMessage(player.getName() + " has bought the Crowl GKit");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -88,6 +91,7 @@ public class KitmapGkitsMenu extends Menu {
                     RankUtils.givePermission(player, "gkit.Rogue+");
                     CoinsUtils.removeCoins(player, 250);
                     player.sendMessage(Utils.color("&aYou have bought Rogue+ GKit"));
+                    PlayerUtils.sendMessage(player.getName() + " has bought the Rogue+ GKit");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -106,6 +110,7 @@ public class KitmapGkitsMenu extends Menu {
                     RankUtils.givePermission(player, "gkit.Diamond+");
                     CoinsUtils.removeCoins(player, 2000);
                     player.sendMessage(Utils.color("&aYou have bought Diamond+ GKit"));
+                    PlayerUtils.sendMessage(player.getName() + " has bought the Diamond+ GKit");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -124,6 +129,7 @@ public class KitmapGkitsMenu extends Menu {
                     RankUtils.givePermission(player, "gkit.Kitting");
                     CoinsUtils.removeCoins(player, 150);
                     player.sendMessage(Utils.color("&aYou have bought Kitting GKit"));
+                    PlayerUtils.sendMessage(player.getName() + " has bought the Kitting GKit");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -142,6 +148,7 @@ public class KitmapGkitsMenu extends Menu {
                     RankUtils.givePermission(player, "gkit.Archer+");
                     CoinsUtils.removeCoins(player, 250);
                     player.sendMessage(Utils.color("&aYou have bought Archer+ GKit"));
+                    PlayerUtils.sendMessage(player.getName() + " has bought the Archer+ GKit");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -160,6 +167,7 @@ public class KitmapGkitsMenu extends Menu {
                     RankUtils.givePermission(player, "gkit.Bard+");
                     CoinsUtils.removeCoins(player, 2000);
                     player.sendMessage(Utils.color("&aYou have bought Bard+ GKit"));
+                    PlayerUtils.sendMessage(player.getName() + " has bought the Bard+ GKit");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));

@@ -1,9 +1,10 @@
-package es.hulk.coins.menus.rank;
+package es.hulk.coins.menus;
 
 import es.hulk.coins.menus.CoinsMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
+import es.hulk.coins.utils.aquacore.PlayerUtils;
 import es.hulk.coins.utils.aquacore.RankUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -44,6 +45,7 @@ public class PermRankMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 250) {
                     RankUtils.setPermRank(player, "Etoirir");
                     CoinsUtils.removeCoins(player, 250);
+                    PlayerUtils.sendMessage(player.getName() + " has bought the rank Etoirir");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -61,6 +63,7 @@ public class PermRankMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 500) {
                     RankUtils.setPermRank(player, "Blaze");
                     CoinsUtils.removeCoins(player, 500);
+                    PlayerUtils.sendMessage(player.getName() + " has bought the rank Blaze");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -78,6 +81,7 @@ public class PermRankMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 750) {
                     RankUtils.setPermRank(player, "Rex");
                     CoinsUtils.removeCoins(player, 750);
+                    PlayerUtils.sendMessage(player.getName() + " has bought the rank Rex");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -95,6 +99,7 @@ public class PermRankMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 1300) {
                     RankUtils.setPermRank(player, "Errier");
                     CoinsUtils.removeCoins(player, 1300);
+                    PlayerUtils.sendMessage(player.getName() + " has bought the rank Errier");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
@@ -112,6 +117,7 @@ public class PermRankMenu extends Menu {
                 if (CoinsUtils.getCoins(player) >= 2000) {
                     RankUtils.setPermRank(player, "Crowl");
                     CoinsUtils.removeCoins(player, 2000);
+                    PlayerUtils.sendMessage(player.getName() + " has bought the rank Crowl");
                     return;
                 }
                 player.sendMessage(Utils.color("&cYou don't have enough coins!"));
