@@ -6,6 +6,7 @@ import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class CoinsSetCommand extends BaseCommand {
@@ -14,6 +15,7 @@ public class CoinsSetCommand extends BaseCommand {
 
     @Override
     public void onCommand(CommandArgs command) {
+        CommandSender sender = command.getSender();
         Player player = command.getPlayer();
         String[] args = command.getArgs();
 
@@ -21,9 +23,9 @@ public class CoinsSetCommand extends BaseCommand {
             try {
                 int amount = Integer.parseInt(args[0]);
                 CoinsUtils.setCoins(player, amount);
-                player.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to your account&7.");
+                sender.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to your account&7.");
             } catch (NumberFormatException e) {
-                player.sendMessage("§cInvalid number.");
+                sender.sendMessage("§cInvalid number.");
             }
         }
 
@@ -34,12 +36,12 @@ public class CoinsSetCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.setCoins(target, amount);
-                    player.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to §f" + args[0] + "&7.");
+                    sender.sendMessage("§eYou have set §6⛃" + amount + " §ecoins to §f" + args[0] + "&7.");
                 } else {
-                    player.sendMessage("§cPlayer not found.");
+                    sender.sendMessage("§cPlayer not found.");
                 }
             } catch (NumberFormatException e) {
-                player.sendMessage("§cInvalid number.");
+                sender.sendMessage("§cInvalid number.");
             }
         }
     }

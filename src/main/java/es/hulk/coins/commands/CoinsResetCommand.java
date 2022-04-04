@@ -6,6 +6,7 @@ import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class CoinsResetCommand extends BaseCommand {
@@ -14,15 +15,16 @@ public class CoinsResetCommand extends BaseCommand {
 
     @Override
     public void onCommand(CommandArgs command) {
+        CommandSender sender = command.getSender();
         Player player = command.getPlayer();
         String[] args = command.getArgs();
 
         if (args.length == 1) {
             try {
                 CoinsUtils.resetCoins(player);
-                player.sendMessage("§cYour coins has been resetted.");
+                sender.sendMessage("§cYour coins has been resetted.");
             } catch (NumberFormatException e) {
-                player.sendMessage("§cInvalid number.");
+                sender.sendMessage("§cInvalid number.");
             }
         }
 
@@ -32,12 +34,12 @@ public class CoinsResetCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.resetCoins(target);
-                    player.sendMessage("§eYou have reset coins of §c" + target.getName() + "&7.");
+                    sender.sendMessage("§eYou have reset coins of §c" + target.getName() + "&7.");
                 } else {
-                    player.sendMessage("§cPlayer not found.");
+                    sender.sendMessage("§cPlayer not found.");
                 }
             } catch (NumberFormatException e) {
-                player.sendMessage("§cInvalid number.");
+                sender.sendMessage("§cInvalid number.");
             }
         }
     }

@@ -4,6 +4,7 @@ import es.hulk.coins.utils.command.BaseCommand;
 import es.hulk.coins.utils.command.Command;
 import es.hulk.coins.utils.command.CommandArgs;
 import me.activated.core.utilities.chat.CC;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 /**
@@ -19,7 +20,7 @@ public class CoinsHelpCommand extends BaseCommand {
 
     @Override
     public void onCommand(CommandArgs command) {
-        Player player = command.getPlayer();
+        CommandSender player = command.getSender();
 
         player.sendMessage(CC.translate("&7&m---------------------------------------------------"));
         player.sendMessage(CC.translate("&b&lCrowl Coins &7- &fInformation on how to use Crowl Coins"));
