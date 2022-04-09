@@ -1,12 +1,12 @@
 JOIN_ITEM:
-  DISPLAYNAME: "&3Coins Shop &7(Right Click)"
+  DISPLAYNAME: "&aJungly Store &7(Click Derecho)"
   MATERIAL: CHEST
   DATA: 0
   SLOT: 5
   AMOUNT: 1
   LORE:
     - ""
-    - "&7&oRight click to join the shop"
+    - "&fUsa &aclick derecho &fpara entrar en la tienda"
     - ""
 
-GIVE_JOIN_ITEM: false
+GIVE_JOIN_ITEM: true
