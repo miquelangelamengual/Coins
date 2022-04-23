@@ -4,11 +4,14 @@ import es.hulk.coins.utils.Utils;
 import me.activated.core.api.player.GlobalPlayer;
 import me.activated.core.plugin.AquaCoreAPI;
 
+import java.util.List;
+
 public class PlayerUtils {
 
     public static void sendMessage(String message) {
-        GlobalPlayer globalPlayer = (GlobalPlayer) AquaCoreAPI.INSTANCE.getGlobalPlayers();
-        globalPlayer.sendMessage(Utils.color(message));
+        for (GlobalPlayer player : AquaCoreAPI.INSTANCE.getGlobalPlayers()) {
+            player.sendMessage(Utils.color(message));
+        }
     }
 
 }
