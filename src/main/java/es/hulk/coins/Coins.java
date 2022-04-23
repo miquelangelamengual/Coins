@@ -54,6 +54,7 @@ public class Coins extends JavaPlugin {
         new CoinsResetCommand();
         new HulkOwnerCommand();
         new CoinsHelpCommand();
+        new ConsoleCoinsCommand();
     }
 
     public void loadListeners() {
