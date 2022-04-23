@@ -47,7 +47,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(11).name("&e&lReward &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a32 keys", "&fCost: &6⛃50 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(11).name("&e&lReward &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a32 keys", "&fCost: &2✦50 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -70,7 +70,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(12, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(1).name("&c&lBlaze &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a18 keys", "&fCost: &6⛃75 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(1).name("&c&lBlaze &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a18 keys", "&fCost: &2✦75 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -93,7 +93,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(13, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(9).name("&d&lMagic &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a12 keys", "&fCost: &6⛃125 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(9).name("&d&lMagic &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a12 keys", "&fCost: &2✦125 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -116,7 +116,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(14, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(12).name("&b&lRoyale &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a8 keys", "&fCost: &6⛃180 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(12).name("&b&lRoyale &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a8 keys", "&fCost: &2✦180 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -139,7 +139,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.GOLD_NUGGET).name("&4&lEvent &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a8 keys", "&fCost: &6⛃240 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.GOLD_NUGGET).name("&4&lEvent &7Key").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a8 keys", "&fCost: &2✦240 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -162,7 +162,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(21, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.ENDER_CHEST).name("&3&lSpecial Box").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a14 keys", "&fCost: &6⛃100 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.ENDER_CHEST).name("&3&lSpecial Box").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a14 keys", "&fCost: &2✦100 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -188,7 +188,7 @@ public class KitmapKeysMenu extends Menu {
         buttons.put(23, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.BEACON).name("&4Draco Lootchest").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a6 keys", "&fCost: &6⛃320 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.BEACON).name("&4Draco Lootchest").lore(Arrays.asList("", "&fThis Keys belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fQuantity&7: &a6 keys", "&fCost: &2✦320 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override

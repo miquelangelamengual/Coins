@@ -16,22 +16,23 @@ import org.bukkit.entity.Player;
 
 public class CoinsHelpCommand extends BaseCommand {
 
-    @Command(name = "coins.help", permission = "coins.command.help", inGameOnly = false)
+    @Command(name = "coins.help", aliases = {"gems.help", "coinshelp", "gemshelp"},permission = "coins.command.help", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {
         CommandSender player = command.getSender();
 
         player.sendMessage(CC.translate("&7&m---------------------------------------------------"));
-        player.sendMessage(CC.translate("&b&lCrowl Coins &7- &fInformation on how to use Crowl Coins"));
+        player.sendMessage(CC.translate("&a&lGems &7- &fInformation on how to use &AGems"));
         player.sendMessage(CC.translate("&7&m---------------------------------------------------"));
-        player.sendMessage(CC.translate("&b&l❄ Staff Commands:"));
-        player.sendMessage(CC.translate(" &7- &f/coins add <player> <coins>&7: &7Add coins to a user"));
-        player.sendMessage(CC.translate(" &7- &f/coins add <coins>&7: &7Add coins to yourself"));
-        player.sendMessage(CC.translate(" &7- &f/coins remove <player> <coins>&7: &7Remove coins to a user"));
-        player.sendMessage(CC.translate(" &7- &f/coins remove <coins>&7: &7Remove coins to yourself"));
-        player.sendMessage(CC.translate(" &7- &f/coins reset <player>&7: &7Reset all coins of a user"));
-        player.sendMessage(CC.translate(" &7- &f/coins set <player>&7: &7Set the number of coins of a user"));
+        player.sendMessage(CC.translate("&2&l❄ Staff Commands:"));
+        player.sendMessage(CC.translate(" &7- &a/gems add <player> <coins>&7: &7Add gems to a user"));
+        player.sendMessage(CC.translate(" &7- &a/gems add <coins>&7: &7Add gems to yourself"));
+        player.sendMessage(CC.translate(" &7- &a/gems remove <player> <coins>&7: &7Remove gems to a user"));
+        player.sendMessage(CC.translate(" &7- &a/gems remove <coins>&7: &7Remove gems to yourself"));
+        player.sendMessage(CC.translate(" &7- &a/gems reset <player>&7: &7Reset all gems of a user"));
+        player.sendMessage(CC.translate(" &7- &a/gems set <player>&7: &7Set the number of gems of a user"));
+        player.sendMessage(CC.translate(" &7- &a/gems check <player>&7: &7Check the gems of a user"));
         player.sendMessage(CC.translate("&7&m---------------------------------------------------"));
     }
 }

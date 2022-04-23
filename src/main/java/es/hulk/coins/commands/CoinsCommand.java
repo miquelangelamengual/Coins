@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsCommand extends BaseCommand {
 
-    @Command(name = "coins", aliases = {"coin", "money"}, usage = "coins", description = "Shows the amount of coins you have.", inGameOnly = false)
+    @Command(name = "coins", aliases = {"coin", "money", "gems", "gems", "checkgems", "checkcoins", "gems.check", "coins.check"}, usage = "coins", description = "Shows the amount of coins you have.", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {
@@ -27,11 +27,11 @@ public class CoinsCommand extends BaseCommand {
         String[] args = command.getArgs();
 
         if (args.length == 0) {
-            sender.sendMessage(CC.translate("§eYou have §6⛃" + CoinsUtils.getCoins(player) + " §ecoins§7."));
+            sender.sendMessage(CC.translate("§aYou have §2✦" + CoinsUtils.getCoins(player) + " §agems§7."));
             return;
         }
 
-        if (player.hasPermission("coins.checkcoins")) {
+        if (player.hasPermission("coins.command.checkcoins")) {
             Player target = Bukkit.getPlayer(args[0]);
 
             if (target == null) {
@@ -39,7 +39,7 @@ public class CoinsCommand extends BaseCommand {
                 return;
             }
 
-            sender.sendMessage(CC.translate(target.getName() + " has " + CoinsUtils.getCoins(target) + " coins"));
+            sender.sendMessage(CC.translate(target.getName() + " &ahas &2✦" + CoinsUtils.getCoins(target) + " &agems§7."));
         }
     }
 }

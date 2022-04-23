@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsRemoveCommand extends BaseCommand {
 
-    @Command(name = "coins.remove", permission = "coins.command.remove", inGameOnly = false)
+    @Command(name = "coins.remove", aliases = {"gems.remove", "gemsremove", "coinsremove", "removegems", "removecoins"} ,permission = "coins.command.remove", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {
@@ -30,7 +30,7 @@ public class CoinsRemoveCommand extends BaseCommand {
             try {
                 int amount = Integer.parseInt(args[0]);
                 CoinsUtils.removeCoins(player, amount);
-                sender.sendMessage("§eYou have removed §6⛃" + amount + " §ecoins to your account&7.");
+                sender.sendMessage("§aYou have removed §2✦" + amount + " §agems to your account§7.");
             } catch (NumberFormatException e) {
                 sender.sendMessage("§cInvalid number.");
             }
@@ -43,7 +43,7 @@ public class CoinsRemoveCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.removeCoins(target, amount);
-                    sender.sendMessage("§eYou have removed §6⛃" + amount + " §ecoins to §f" + args[0] +"&7.");
+                    sender.sendMessage("§eYou have removed §2✦" + amount + " §egems to §f" + args[0] +"§7.");
                 } else {
                     sender.sendMessage("§cPlayer not found.");
                 }

@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsAddCommand extends BaseCommand {
 
-    @Command(name = "coins.add", aliases = {"coins.give", "coins.givecoins"},  permission = "coins.command.add", inGameOnly = false)
+    @Command(name = "coins.add", aliases = {"coins.give", "coins.givecoins", "gems.give", "givegems", "gems.givegems", "addgems", "addgems"},  permission = "coins.command.add", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {
@@ -30,7 +30,7 @@ public class CoinsAddCommand extends BaseCommand {
             try {
                 int amount = Integer.parseInt(args[0]);
                 CoinsUtils.addCoins(player, amount);
-                sender.sendMessage("§aYou have added §6⛃" + amount + " §acoins to your account&7.");
+                sender.sendMessage("§aYou have added §2✦" + amount + " §agems to your account§7.");
             } catch (NumberFormatException e) {
                 sender.sendMessage("§cInvalid number.");
             }
@@ -43,7 +43,7 @@ public class CoinsAddCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.addCoins(target, amount);
-                    sender.sendMessage("§eYou have added §6⛃" + amount + " §ecoins to §f" + args[0] + "&7.");
+                    sender.sendMessage("§aYou have added §2✦" + amount + " §agems to §f" + args[0] + "§7.");
                 } else {
                     sender.sendMessage("§cPlayer not found.");
                 }

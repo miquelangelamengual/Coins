@@ -37,7 +37,7 @@ public class PermRankMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(4).name("&9&lEtoirir &7Rank").lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃250 coins", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(4).name("&9&lEtoirir &7Rank").lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &2✦250 gems", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -55,7 +55,7 @@ public class PermRankMenu extends Menu {
         buttons.put(12, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃500 coins", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&c&lBlaze Rank").build();
+                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &2✦500 gems", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&c&lBlaze Rank").build();
             }
 
             @Override
@@ -73,7 +73,7 @@ public class PermRankMenu extends Menu {
         buttons.put(13, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(14).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃750 coins", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&6&lRex &7Rank").build();
+                return new ItemBuilder(Material.INK_SACK).data(14).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &2✦750 gems", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&6&lRex &7Rank").build();
             }
 
             @Override
@@ -91,7 +91,7 @@ public class PermRankMenu extends Menu {
         buttons.put(14, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃1300 coins", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&4&lErrier &7Rank").build();
+                return new ItemBuilder(Material.INK_SACK).data(1).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &2✦1300 gems", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&4&lErrier &7Rank").build();
             }
 
             @Override
@@ -109,7 +109,7 @@ public class PermRankMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(12).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &6⛃2000 coins", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&b&lCrowl &7Rank").build();
+                return new ItemBuilder(Material.INK_SACK).data(12).lore(Arrays.asList("", "&fThis rank is &cpermanent&7.", "", "&fCost: &2✦2000 gems", "", "&7&oSee the advantages of this rank", "&7&oin crowl.club/discord &7-&o ranks channel", "", "&a&lClick to purchase it")).name("&b&lCrowl &7Rank").build();
             }
 
             @Override

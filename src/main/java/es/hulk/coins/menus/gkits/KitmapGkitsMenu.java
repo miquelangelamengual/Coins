@@ -44,7 +44,7 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(3, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(9).name("&d&lMonthly &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃500 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(9).name("&d&lMonthly &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &2✦500 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -63,7 +63,7 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(5, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(12).name("&3&lCrowl &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃500 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.INK_SACK).data(12).name("&3&lCrowl &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &2✦500 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -82,7 +82,7 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(11, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.CHAINMAIL_CHESTPLATE).name("&8&lRogue+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.CHAINMAIL_CHESTPLATE).name("&8&lRogue+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &2✦250 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -101,7 +101,7 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(12, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.DIAMOND_CHESTPLATE).name("&b&lDiamond+ &9&LGKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.DIAMOND_CHESTPLATE).name("&b&lDiamond+ &9&LGKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &2✦250 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -120,7 +120,7 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(13, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.DIAMOND_PICKAXE).name("&fKitting GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃150 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.DIAMOND_PICKAXE).name("&fKitting GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &2✦150 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -139,7 +139,7 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(14, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.LEATHER_CHESTPLATE).name("&5&lArcher+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.LEATHER_CHESTPLATE).name("&5&lArcher+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &2⛃250 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override
@@ -158,7 +158,7 @@ public class KitmapGkitsMenu extends Menu {
         buttons.put(15, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.GOLD_CHESTPLATE).name("&6&lBard+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &6⛃250 coins", "", "&a&lClick to purchase it")).build();
+                return new ItemBuilder(Material.GOLD_CHESTPLATE).name("&6&lBard+ &7GKit").lore(Arrays.asList("", "&fThis Gkit belong to &eKitMap", "&fIf you buy it on other sites the coins will be &cremoved&7.", "", "&fCost: &2✦250 gems", "", "&a&lClick to purchase it")).build();
             }
 
             @Override

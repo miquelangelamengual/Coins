@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 
 public class CoinsResetCommand extends BaseCommand {
 
-    @Command(name = "coins.reset", permission = "coins.command.reset", inGameOnly = false)
+    @Command(name = "coins.reset", aliases = {"gems.remove", "gemsreset", "resetgems", "coinsremove", "removecoins"} ,permission = "coins.command.reset", inGameOnly = false)
 
     @Override
     public void onCommand(CommandArgs command) {
@@ -22,7 +22,7 @@ public class CoinsResetCommand extends BaseCommand {
         if (args.length == 1) {
             try {
                 CoinsUtils.resetCoins(player);
-                sender.sendMessage("§cYour coins has been resetted.");
+                sender.sendMessage("§aYour coins has been §cresetted§7.");
             } catch (NumberFormatException e) {
                 sender.sendMessage("§cInvalid number.");
             }
@@ -34,7 +34,7 @@ public class CoinsResetCommand extends BaseCommand {
 
                 if (target != null) {
                     CoinsUtils.resetCoins(target);
-                    sender.sendMessage("§eYou have reset coins of §c" + target.getName() + "&7.");
+                    sender.sendMessage("§aYou have reset gems of §f" + target.getName() + "§7.");
                 } else {
                     sender.sendMessage("§cPlayer not found.");
                 }
