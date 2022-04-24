@@ -52,12 +52,12 @@ public class KitmapKeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (Coins.get().isCratesEnabled()) {
+                if (Coins.getInstance().isCratesEnabled()) {
                     if (CoinsUtils.getCoins(player) >= 50) {
-                        Coins.get().getCrates().getCrateManager().giveKeyPlayer("Reward", 32, player);
+                        Coins.getInstance().getCrates().getCrateManager().giveKeyPlayer("Reward", 32, player);
                         CoinsUtils.removeCoins(player, 50);
                         player.sendMessage(Utils.color("&aYou bought &lx12&a Reward Key"));
-                        PlayerUtils.sendMessage(player.getName() + " has bought the x12 Reward Key");
+                        PlayerUtils.sendGlobalMessage(player.getName() + " has bought the x12 Reward Key");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));
@@ -75,12 +75,12 @@ public class KitmapKeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (Coins.get().isCratesEnabled()) {
+                if (Coins.getInstance().isCratesEnabled()) {
                     if (CoinsUtils.getCoins(player) >= 75) {
-                        Coins.get().getCrates().getCrateManager().giveKeyPlayer("Blaze", 18, player);
+                        Coins.getInstance().getCrates().getCrateManager().giveKeyPlayer("Blaze", 18, player);
                         CoinsUtils.removeCoins(player, 75);
                         player.sendMessage(Utils.color("&aYou bought &lx18&a Blaze Key"));
-                        PlayerUtils.sendMessage(player.getName() + " has bought the x18 Blaze Key");
+                        PlayerUtils.sendGlobalMessage(player.getName() + " has bought the x18 Blaze Key");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));
@@ -98,12 +98,12 @@ public class KitmapKeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (Coins.get().isCratesEnabled()) {
+                if (Coins.getInstance().isCratesEnabled()) {
                     if (CoinsUtils.getCoins(player) >= 125) {
-                        Coins.get().getCrates().getCrateManager().giveKeyPlayer("Magic", 12, player);
+                        Coins.getInstance().getCrates().getCrateManager().giveKeyPlayer("Magic", 12, player);
                         CoinsUtils.removeCoins(player, 125);
                         player.sendMessage(Utils.color("&aYou bought &lx12&a Magic Key"));
-                        PlayerUtils.sendMessage(player.getName() + " has bought the x12 Magic Key");
+                        PlayerUtils.sendGlobalMessage(player.getName() + " has bought the x12 Magic Key");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));
@@ -121,12 +121,12 @@ public class KitmapKeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (Coins.get().isCratesEnabled()) {
+                if (Coins.getInstance().isCratesEnabled()) {
                     if (CoinsUtils.getCoins(player) >= 180) {
-                        Coins.get().getCrates().getCrateManager().giveKeyPlayer("Royale", 8, player);
+                        Coins.getInstance().getCrates().getCrateManager().giveKeyPlayer("Royale", 8, player);
                         CoinsUtils.removeCoins(player, 180);
                         player.sendMessage(Utils.color("&aYou bought &lx8&a Royale Key"));
-                        PlayerUtils.sendMessage(player.getName() + " has bought the x8 Royale Key");
+                        PlayerUtils.sendGlobalMessage(player.getName() + " has bought the x8 Royale Key");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));
@@ -144,12 +144,12 @@ public class KitmapKeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (Coins.get().isCratesEnabled()) {
+                if (Coins.getInstance().isCratesEnabled()) {
                     if (CoinsUtils.getCoins(player) >= 240) {
-                        Coins.get().getCrates().getCrateManager().giveKeyPlayer("Event", 8, player);
+                        Coins.getInstance().getCrates().getCrateManager().giveKeyPlayer("Event", 8, player);
                         CoinsUtils.removeCoins(player, 240);
                         player.sendMessage(Utils.color("&aYou bought &lx8&a Event Key"));
-                        PlayerUtils.sendMessage(player.getName() + " has bought the x8 Event Key");
+                        PlayerUtils.sendGlobalMessage(player.getName() + " has bought the x8 Event Key");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));
@@ -167,13 +167,13 @@ public class KitmapKeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (Coins.get().isCratesEnabled()) {
+                if (Coins.getInstance().isCratesEnabled()) {
                     if (CoinsUtils.getCoins(player) >= 100) {
                         Package pack = SladeAbility.get().getPackageManager().getPackageByName("Special");
                         player.getInventory().addItem(pack.getPackageItem(14));
                         CoinsUtils.removeCoins(player, 100);
                         player.sendMessage(Utils.color("&aYou bought &lx14&a Special Box"));
-                        PlayerUtils.sendMessage(player.getName() + " has bought the x14 Special Box");
+                        PlayerUtils.sendGlobalMessage(player.getName() + " has bought the x14 Special Box");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));
@@ -193,12 +193,12 @@ public class KitmapKeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (Coins.get().isAdvanced()) {
+                if (Coins.getInstance().isAdvanced()) {
                     if (CoinsUtils.getCoins(player) >= 320) {
                         CrateUtils.giveAdvancedCrate(player, "Draco", 6);
                         CoinsUtils.removeCoins(player, 320);
                         player.sendMessage(Utils.color("&aYou bought &lx1&a Draco Lootchest"));
-                        PlayerUtils.sendMessage(player.getName() + " has bought the a Draco Lootchest");
+                        PlayerUtils.sendGlobalMessage(player.getName() + " has bought the a Draco Lootchest");
                         return;
                     }
                     player.sendMessage(Utils.color("&cYou dont have enough coins."));

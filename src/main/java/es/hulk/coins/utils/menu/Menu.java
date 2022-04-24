@@ -90,7 +90,7 @@ public abstract class Menu {
 
         this.setClosedByMenu(false);
         if (autoUpdate && task == null) {
-            task = Coins.get().getServer().getScheduler().runTaskTimer(Coins.get(), () -> this.openMenu(player), 0, 20L);
+            task = Coins.getInstance().getServer().getScheduler().runTaskTimer(Coins.getInstance(), () -> this.openMenu(player), 0, 20L);
         }
     }
 

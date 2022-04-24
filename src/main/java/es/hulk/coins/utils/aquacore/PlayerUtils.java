@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PlayerUtils {
 
-    public static void sendMessage(String message) {
+    public static void sendGlobalMessage(String message) {
         for (GlobalPlayer player : AquaCoreAPI.INSTANCE.getGlobalPlayers()) {
             player.sendMessage(Utils.color(message));
         }

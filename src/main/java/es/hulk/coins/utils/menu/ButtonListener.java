@@ -1,5 +1,7 @@
 package es.hulk.coins.utils.menu;
 
+import es.hulk.coins.Coins;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -9,6 +11,10 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 
 public class ButtonListener implements Listener {
+
+    public ButtonListener() {
+        Bukkit.getServer().getPluginManager().registerEvents(this, Coins.getInstance());
+    }
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onButtonPress(final InventoryClickEvent event) {

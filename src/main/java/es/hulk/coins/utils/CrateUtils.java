@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 public class CrateUtils {
 
     public static void giveAdvancedCrate(Player player, String crate, int amount) {
-        if (Coins.get().isAdvanced()) {
+        if (Coins.getInstance().isAdvanced()) {
             Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "ac give " + player.getName() + " " + crate + " " + amount);
         }
     }
