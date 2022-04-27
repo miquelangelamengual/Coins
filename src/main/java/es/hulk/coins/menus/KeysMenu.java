@@ -33,12 +33,12 @@ public class KeysMenu extends Menu {
 
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.INK_SACK).data(13).name("&b&lRoyale Keys").build();
+                return new ItemBuilder(Material.INK_SACK).data(13).name("&b&lKingdoms Keys").build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                new PermRankMenu().openMenu(player);
+                new RankMenu().openMenu(player);
             }
         });
 
