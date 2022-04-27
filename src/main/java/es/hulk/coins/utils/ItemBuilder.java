@@ -9,6 +9,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -121,12 +122,22 @@ public class ItemBuilder {
             LeatherArmorMeta leatherArmorMeta = (LeatherArmorMeta) this.itemStack.getItemMeta();
             leatherArmorMeta.setColor(color);
             this.itemStack.setItemMeta(leatherArmorMeta);
-        }
-        catch (Exception exception) {
+        } catch (Exception exception) {
             Bukkit.getConsoleSender().sendMessage("Error set armor color.");
         }
         return this;
     }
+
+    public ItemBuilder addLoreLine(String line) {
+        ItemMeta im = itemStack.getItemMeta();
+        List<String> lore = new ArrayList<>();
+        if (im.hasLore()) lore = new ArrayList<>(im.getLore());
+        lore.add(Utils.color(line));
+        im.setLore(lore);
+        itemStack.setItemMeta(im);
+        return this;
+    }
+
 
     public ItemStack build() {
         return this.itemStack;

@@ -2,6 +2,8 @@ package es.hulk.coins;
 
 import club.crowl.crates.Crates;
 import es.hulk.coins.commands.*;
+import es.hulk.coins.utils.aquamenu.MenuManager;
+import es.hulk.coins.utils.aquamenu.listener.AquaMenuListener;
 import es.hulk.coins.utils.command.CommandManager;
 import es.hulk.coins.utils.menu.ButtonListener;
 import lombok.Getter;
@@ -23,6 +25,7 @@ public class Coins extends JavaPlugin {
 
     public ItemStack coinsItem;
     private Crates crates;
+    private MenuManager menuManager;
 
     @Getter private static Coins instance;
 
@@ -31,6 +34,7 @@ public class Coins extends JavaPlugin {
         instance = this;
 
         this.commandManager = new CommandManager(this, new ArrayList<>());
+        this.menuManager = new MenuManager(this);
 
         if (Bukkit.getPluginManager().getPlugin("CrowlCrates") != null) {
             this.isCratesEnabled = true;
@@ -43,6 +47,7 @@ public class Coins extends JavaPlugin {
 
         this.loadCommands();
         new ButtonListener();
+        new AquaMenuListener();
     }
 
     public void loadCommands() {
