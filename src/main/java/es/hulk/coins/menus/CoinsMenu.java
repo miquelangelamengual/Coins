@@ -86,7 +86,7 @@ public class CoinsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                new PermRankMenu().openMenu(player);
+                new RankMenu().openMenu(player);
             }
         });
 
