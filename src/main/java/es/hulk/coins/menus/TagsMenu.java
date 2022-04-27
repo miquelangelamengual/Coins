@@ -1,7 +1,10 @@
 package es.hulk.coins.menus;
 
 import es.hulk.coins.utils.ItemBuilder;
+import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
+import es.hulk.coins.utils.aquacore.PlayerUtils;
+import es.hulk.coins.utils.aquacore.RankUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
 import es.hulk.coins.utils.menu.pagination.PaginatedMenu;
@@ -46,15 +49,29 @@ public class TagsMenu extends PaginatedMenu {
         for (Tag tag : AquaCore.INSTANCE.getTagManagement().getTags()) {
             buttons.put(buttons.size(), new Button() {
                 @Override
-                public ItemStack getButtonItem(Player p0) {
-                    return new ItemBuilder(Material.NAME_TAG).name(tag.getColor() + tag.getName()).build();
+                public ItemStack getButtonItem(Player player) {
+                    if (player.hasPermission("aqua.tags." + tag.getName())) {
+                        return new ItemBuilder(Material.NAME_TAG).name(tag.getName()).lore("&aAlredy have this tag").build();
+                    } else {
+                        return new ItemBuilder(Material.NAME_TAG).name(tag.getColor() + tag.getName()).build();
+                    }
                 }
 
                 @Override
                 public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                    if (CoinsUtils.getCoins(player) >= 350) {
 
+                    if (player.hasPermission("aqua.tags." + tag.getName())) {
+                        player.sendMessage(Utils.color("&cYou already have this tag"));
                     }
+
+                    if (CoinsUtils.getCoins(player) >= 350) {
+                        CoinsUtils.removeCoins(player, 350);
+                        RankUtils.givePermission(player, "aqua.tags." + tag.getName());
+                        player.sendMessage("§aYou have bought the tag §e" + tag.getName());
+                        PlayerUtils.sendGlobalMessage("§a" + player.getName() + " has bought the tag §e" + tag.getName());
+                        return;
+                    }
+                    player.sendMessage("§cYou don't have enough coins");
                 }
             });
         }
