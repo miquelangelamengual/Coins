@@ -18,8 +18,8 @@ public class ButtonListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onButtonPress(final InventoryClickEvent event) {
-        final Player player = (Player)event.getWhoClicked();
-        final Menu openMenu = Menu.currentlyOpenedMenus.get(player.getName());
+        Player player = (Player) event.getWhoClicked();
+        Menu openMenu = Menu.currentlyOpenedMenus.get(player.getName());
         if (openMenu != null) {
             if (event.getSlot() != event.getRawSlot()) {
                 if (event.getClick() == ClickType.SHIFT_LEFT || event.getClick() == ClickType.SHIFT_RIGHT) {
@@ -28,24 +28,22 @@ public class ButtonListener implements Listener {
                 return;
             }
             if (openMenu.getButtons().containsKey(event.getSlot())) {
-                final Button button = openMenu.getButtons().get(event.getSlot());
-                final boolean shouldCancel = button.shouldCancel(player, event.getSlot(), event.getClick());
-                final boolean shouldShift = button.shouldShift(player, event.getSlot(), event.getClick());
+                Button button = openMenu.getButtons().get(event.getSlot());
+                boolean shouldCancel = button.shouldCancel(player, event.getSlot(), event.getClick());
+                boolean shouldShift = button.shouldShift(player, event.getSlot(), event.getClick());
                 if (shouldCancel && shouldShift) {
                     event.setCancelled(true);
-                }
-                else {
+                } else {
                     event.setCancelled(shouldCancel);
                 }
                 button.clicked(player, event.getSlot(), event.getClick(), event.getHotbarButton());
                 if (Menu.currentlyOpenedMenus.containsKey(player.getName())) {
-                    final Menu newMenu = Menu.currentlyOpenedMenus.get(player.getName());
+                    Menu newMenu = Menu.currentlyOpenedMenus.get(player.getName());
                     if (newMenu == openMenu && openMenu.isUpdateAfterClick()) {
                         openMenu.setClosedByMenu(true);
                         newMenu.openMenu(player);
                     }
-                }
-                else if (button.shouldUpdate(player, event.getSlot(), event.getClick())) {
+                } else if (button.shouldUpdate(player, event.getSlot(), event.getClick())) {
                     openMenu.setClosedByMenu(true);
                     openMenu.openMenu(player);
                 }
@@ -55,7 +53,7 @@ public class ButtonListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH)
     public void onInventoryClose(final InventoryCloseEvent event) {
-        final Player player = (Player)event.getPlayer();
+        final Player player = (Player) event.getPlayer();
         final Menu openMenu = Menu.currentlyOpenedMenus.get(player.getName());
         if (openMenu != null) {
             openMenu.onClose(player);
