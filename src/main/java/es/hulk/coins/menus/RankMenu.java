@@ -1,6 +1,5 @@
 package es.hulk.coins.menus;
 
-import es.hulk.coins.menus.CoinsMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.Utils;
 import es.hulk.coins.utils.aquacore.CoinsUtils;
@@ -18,7 +17,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PermRankMenu extends Menu {
+public class RankMenu extends Menu {
 
     @Override
     public String getTitle(Player player) {
