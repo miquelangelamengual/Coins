@@ -118,6 +118,10 @@ public class CoinsMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
+                if (player.hasPermission("kitmap.tags")) {
+                    new TagsMenu().openMenu(player);
+                    return;
+                }
                 player.sendMessage(Utils.color("&4&lUNDER CONSTRUCTION"));
             }
         });

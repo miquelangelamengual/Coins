@@ -8,14 +8,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.inventory.ItemStack;
 
-public class JumpToPageButton extends Button
-{
+public class JumpToPageButton extends Button {
     private final int page;
     private final PaginatedMenu menu;
     private final boolean current;
 
     @Override
-    public ItemStack getButtonItem(final Player player) {
+    public ItemStack getButtonItem(Player player) {
         ItemBuilder itemBuilder = new ItemBuilder(this.current ? Material.ENCHANTED_BOOK : Material.BOOK).amount(this.page);
         itemBuilder.name(Utils.color("&cPage " + this.page));
         if (this.current) {
@@ -25,12 +24,12 @@ public class JumpToPageButton extends Button
     }
 
     @Override
-    public void clicked(final Player player, final int i, final ClickType clickType, final int hb) {
+    public void clicked(Player player, int i, ClickType clickType, int hb) {
         this.menu.modPage(player, this.page - this.menu.getPage());
         Button.playNeutral(player);
     }
 
-    public JumpToPageButton(final int page, final PaginatedMenu menu, final boolean current) {
+    public JumpToPageButton(int page, PaginatedMenu menu, boolean current) {
         this.page = page;
         this.menu = menu;
         this.current = current;

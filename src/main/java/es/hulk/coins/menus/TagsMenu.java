@@ -7,6 +7,7 @@ import es.hulk.coins.utils.aquacore.PlayerUtils;
 import es.hulk.coins.utils.aquacore.RankUtils;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
+import es.hulk.coins.utils.menu.pagination.JumpToPageButton;
 import es.hulk.coins.utils.menu.pagination.PaginatedMenu;
 import me.activated.core.api.tags.Tag;
 import me.activated.core.plugin.AquaCore;
@@ -39,7 +40,7 @@ public class TagsMenu extends PaginatedMenu {
 
     @Override
     public String getPrePaginatedTitle(Player p0) {
-        return null;
+        return "1";
     }
 
     @Override
@@ -51,7 +52,7 @@ public class TagsMenu extends PaginatedMenu {
                 @Override
                 public ItemStack getButtonItem(Player player) {
                     if (player.hasPermission("aqua.tags." + tag.getName())) {
-                        return new ItemBuilder(Material.NAME_TAG).name(tag.getName()).lore("&aAlredy have this tag").build();
+                        return new ItemBuilder(Material.NAME_TAG).name(tag.getColor() + tag.getName()).lore("&aAlredy have this tag").build();
                     } else {
                         return new ItemBuilder(Material.NAME_TAG).name(tag.getColor() + tag.getName()).build();
                     }
@@ -62,6 +63,7 @@ public class TagsMenu extends PaginatedMenu {
 
                     if (player.hasPermission("aqua.tags." + tag.getName())) {
                         player.sendMessage(Utils.color("&cYou already have this tag"));
+                        return;
                     }
 
                     if (CoinsUtils.getCoins(player) >= 350) {
@@ -75,7 +77,6 @@ public class TagsMenu extends PaginatedMenu {
                 }
             });
         }
-
-        return null;
+        return buttons;
     }
 }
