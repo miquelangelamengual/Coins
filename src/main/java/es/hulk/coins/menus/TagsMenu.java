@@ -35,7 +35,7 @@ public class TagsMenu extends SwitchableMenu {
 
     @Override
     public String getPagesTitle(Player player) {
-        return "polla";
+        return "Tags Menu";
     }
 
     @Override
@@ -45,7 +45,7 @@ public class TagsMenu extends SwitchableMenu {
             slots.add(new Slot() {
                 @Override
                 public ItemStack getItem(Player player) {
-                    return new ItemBuilder(Material.NAME_TAG).name(tag.getName()).build();
+                    return new ItemBuilder(Material.NAME_TAG).name(tag.getColor() + tag.getName()).lore(addTagLore(tag, player)).build();
                 }
 
                 @Override
@@ -60,8 +60,8 @@ public class TagsMenu extends SwitchableMenu {
                         return;
                     }
 
-                    if (CoinsUtils.getCoins(player) >= 350) {
-                        CoinsUtils.removeCoins(player, 350);
+                    if (CoinsUtils.getCoins(player) >= 200) {
+                        CoinsUtils.removeCoins(player, 200);
                         RankUtils.givePermission(player, "aqua.tags." + tag.getName());
                         player.sendMessage("§aYou have bought the tag §e" + tag.getName());
                         PlayerUtils.sendGlobalMessage("§a" + player.getName() + " has bought the tag §e" + tag.getName());
@@ -77,5 +77,23 @@ public class TagsMenu extends SwitchableMenu {
     @Override
     public List<Slot> getEveryMenuSlots(Player player) {
         return new ArrayList<>();
+    }
+
+    private List<String> addTagLore(Tag tag, Player player) {
+        List<String> lore = new ArrayList<>();
+
+        if (player.hasPermission("aqua.tags." + tag.getName())) {
+            lore.add("");
+            lore.add("&aYou already have this tag");
+        }
+
+        lore.add("");
+        lore.add("&bFormat&7: &f" + tag.getFormat());
+        lore.add("");
+        lore.add("&bChat");
+        lore.add(tag.getColor() + tag.getFormat() + player.getDisplayName());
+        lore.add("");
+        lore.add("&bCost&7: &f200 Gems");
+        return lore;
     }
 }

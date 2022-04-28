@@ -113,16 +113,12 @@ public class CoinsMenu extends Menu {
         buttons.put(23, new Button() {
             @Override
             public ItemStack getButtonItem(Player p0) {
-                return new ItemBuilder(Material.NAME_TAG).name("&bTags").build();
+                return new ItemBuilder(Material.NAME_TAG).name("&aTags").build();
             }
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                if (player.hasPermission("kitmap.tags")) {
-                    new TagsMenu().open(player);
-                    return;
-                }
-                player.sendMessage(Utils.color("&4&lUNDER CONSTRUCTION"));
+                new TagsMenu().open(player);
             }
         });
 

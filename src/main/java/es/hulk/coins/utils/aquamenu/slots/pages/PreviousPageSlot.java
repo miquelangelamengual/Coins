@@ -18,21 +18,21 @@ public class PreviousPageSlot extends Slot {
     @Override
     public ItemStack getItem(Player player) {
         ItemBuilder item = new ItemBuilder(Material.CARPET);
-        item.name("&6Previous Page");
+        item.name("&3Previous Page");
         item.addLoreLine(" ");
 
         if (this.switchableMenu.getPage() != 1) {
-            item.addLoreLine("&7Click to head over");
-            item.addLoreLine("&7to previous page.");
+            item.addLoreLine("&fClick to head over");
+            item.addLoreLine("&fto previous page.");
             item.addLoreLine(" ");
-            item.addLoreLine("&6Page: &7(&e" + this.switchableMenu.getPage() + "&7/&e" + this.switchableMenu.getPages(player) + "&7)");
+            item.addLoreLine("&bPage: &f" + this.switchableMenu.getPage() + " &7/ &f" + this.switchableMenu.getPages(player));
         } else {
-            item.addLoreLine("&eThere is no previous page.");
-            item.addLoreLine("&eYou're on the first page.");
+            item.addLoreLine("&fThere is no previous page.");
+            item.addLoreLine("&fYou're on the first page.");
             item.addLoreLine(" ");
-            item.addLoreLine("&6Page: &7(&e" + this.switchableMenu.getPage() + "&7/&e" + this.switchableMenu.getPages(player) + "&7)");
+            item.addLoreLine("&bPage: &f" + this.switchableMenu.getPage() + " &7/ &f" + this.switchableMenu.getPages(player));
         }
-        item.lore(" ");
+        item.addLoreLine(" ");
 
         return item.build();
     }

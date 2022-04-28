@@ -25,12 +25,12 @@ public class NextPageSlot extends Slot {
             item.addLoreLine("&fClick to head");
             item.addLoreLine("&fover to next page.");
             item.addLoreLine(" ");
-            item.addLoreLine("&bPage: &7(&f" + this.switchableMenu.getPage() + " &7/ &f" + this.switchableMenu.getPages(player) + "&7)");
+            item.addLoreLine("&bPage: &f" + this.switchableMenu.getPage() + " &7/ &f" + this.switchableMenu.getPages(player));
         } else {
             item.addLoreLine("&fThere is no next page.");
             item.addLoreLine("&fYou're on the last page.");
             item.addLoreLine(" ");
-            item.addLoreLine("&bPage: &7(&f" + this.switchableMenu.getPage() + " &7/ &f" + this.switchableMenu.getPages(player) + "&7)");
+            item.addLoreLine("&bPage: &f" + this.switchableMenu.getPage() + " &7/ &f" + this.switchableMenu.getPages(player));
         }
         item.addLoreLine(" ");
 
