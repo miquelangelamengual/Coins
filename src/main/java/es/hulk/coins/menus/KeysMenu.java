@@ -1,6 +1,7 @@
 package es.hulk.coins.menus;
 
 import es.hulk.coins.menus.keys.HCFKeysMenu;
+import es.hulk.coins.menus.keys.KitmapKeysMenu;
 import es.hulk.coins.utils.ItemBuilder;
 import es.hulk.coins.utils.menu.Button;
 import es.hulk.coins.utils.menu.Menu;
@@ -38,7 +39,7 @@ public class KeysMenu extends Menu {
 
             @Override
             public void clicked(Player player, int slot, ClickType clickType, int hotbarButton) {
-                new RankMenu().openMenu(player);
+                new KitmapKeysMenu().openMenu(player);
             }
         });
 
